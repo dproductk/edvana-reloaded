@@ -92,6 +92,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EDVANA — Government Polytechnic Kolhapur" },
+      { name: "twitter:description", content: "Student Management Information System for Government Polytechnic Kolhapur — profile, exams, results, fees and more." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/edef7af8-0728-4961-9872-acc9272c2115/id-preview-500197e6--3427db75-f1dd-4f80-93ca-133c2a47e3a1.lovable.app-1784875274884.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/edef7af8-0728-4961-9872-acc9272c2115/id-preview-500197e6--3427db75-f1dd-4f80-93ca-133c2a47e3a1.lovable.app-1784875274884.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
