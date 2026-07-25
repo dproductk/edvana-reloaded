@@ -13,7 +13,29 @@ import { Route as StudentRouteImport } from './routes/student'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as StudentIndexRouteImport } from './routes/student.index'
+import { Route as StudentResultRouteImport } from './routes/student.result'
+import { Route as StudentProfileRouteImport } from './routes/student.profile'
+import { Route as StudentPaymentHistoryRouteImport } from './routes/student.payment-history'
+import { Route as StudentOnlineExamRouteImport } from './routes/student.online-exam'
+import { Route as StudentFacilityFeedbackRouteImport } from './routes/student.facility-feedback'
+import { Route as StudentDuplicateIdRouteImport } from './routes/student.duplicate-id'
 import { Route as StudentDashboardRouteImport } from './routes/student.dashboard'
+import { Route as StudentChangePasswordRouteImport } from './routes/student.change-password'
+import { Route as StudentAdmissionFeeRouteImport } from './routes/student.admission-fee'
+import { Route as StudentYearWiseResultSyRouteImport } from './routes/student.year-wise-result.sy'
+import { Route as StudentYearWiseResultFyRouteImport } from './routes/student.year-wise-result.fy'
+import { Route as StudentPhotocopyReceiptRouteImport } from './routes/student.photocopy.receipt'
+import { Route as StudentPhotocopyPrintRouteImport } from './routes/student.photocopy.print'
+import { Route as StudentPhotocopyPaymentRouteImport } from './routes/student.photocopy.payment'
+import { Route as StudentPhotocopyFillRouteImport } from './routes/student.photocopy.fill'
+import { Route as StudentPhotocopyConfirmRouteImport } from './routes/student.photocopy.confirm'
+import { Route as StudentFeedbackMidtermRouteImport } from './routes/student.feedback.midterm'
+import { Route as StudentFeedbackEndtermRouteImport } from './routes/student.feedback.endterm'
+import { Route as StudentExamRegistrationReceiptRouteImport } from './routes/student.exam-registration.receipt'
+import { Route as StudentExamRegistrationPrintRouteImport } from './routes/student.exam-registration.print'
+import { Route as StudentExamRegistrationPaymentRouteImport } from './routes/student.exam-registration.payment'
+import { Route as StudentExamRegistrationFillRouteImport } from './routes/student.exam-registration.fill'
+import { Route as StudentExamRegistrationConfirmRouteImport } from './routes/student.exam-registration.confirm'
 
 const StudentRoute = StudentRouteImport.update({
   id: '/student',
@@ -35,45 +57,301 @@ const StudentIndexRoute = StudentIndexRouteImport.update({
   path: '/',
   getParentRoute: () => StudentRoute,
 } as any)
+const StudentResultRoute = StudentResultRouteImport.update({
+  id: '/result',
+  path: '/result',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentProfileRoute = StudentProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPaymentHistoryRoute = StudentPaymentHistoryRouteImport.update({
+  id: '/payment-history',
+  path: '/payment-history',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentOnlineExamRoute = StudentOnlineExamRouteImport.update({
+  id: '/online-exam',
+  path: '/online-exam',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentFacilityFeedbackRoute = StudentFacilityFeedbackRouteImport.update({
+  id: '/facility-feedback',
+  path: '/facility-feedback',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentDuplicateIdRoute = StudentDuplicateIdRouteImport.update({
+  id: '/duplicate-id',
+  path: '/duplicate-id',
+  getParentRoute: () => StudentRoute,
+} as any)
 const StudentDashboardRoute = StudentDashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
   getParentRoute: () => StudentRoute,
 } as any)
+const StudentChangePasswordRoute = StudentChangePasswordRouteImport.update({
+  id: '/change-password',
+  path: '/change-password',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentAdmissionFeeRoute = StudentAdmissionFeeRouteImport.update({
+  id: '/admission-fee',
+  path: '/admission-fee',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentYearWiseResultSyRoute = StudentYearWiseResultSyRouteImport.update({
+  id: '/year-wise-result/sy',
+  path: '/year-wise-result/sy',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentYearWiseResultFyRoute = StudentYearWiseResultFyRouteImport.update({
+  id: '/year-wise-result/fy',
+  path: '/year-wise-result/fy',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPhotocopyReceiptRoute = StudentPhotocopyReceiptRouteImport.update({
+  id: '/photocopy/receipt',
+  path: '/photocopy/receipt',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPhotocopyPrintRoute = StudentPhotocopyPrintRouteImport.update({
+  id: '/photocopy/print',
+  path: '/photocopy/print',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPhotocopyPaymentRoute = StudentPhotocopyPaymentRouteImport.update({
+  id: '/photocopy/payment',
+  path: '/photocopy/payment',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPhotocopyFillRoute = StudentPhotocopyFillRouteImport.update({
+  id: '/photocopy/fill',
+  path: '/photocopy/fill',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPhotocopyConfirmRoute = StudentPhotocopyConfirmRouteImport.update({
+  id: '/photocopy/confirm',
+  path: '/photocopy/confirm',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentFeedbackMidtermRoute = StudentFeedbackMidtermRouteImport.update({
+  id: '/feedback/midterm',
+  path: '/feedback/midterm',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentFeedbackEndtermRoute = StudentFeedbackEndtermRouteImport.update({
+  id: '/feedback/endterm',
+  path: '/feedback/endterm',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentExamRegistrationReceiptRoute =
+  StudentExamRegistrationReceiptRouteImport.update({
+    id: '/exam-registration/receipt',
+    path: '/exam-registration/receipt',
+    getParentRoute: () => StudentRoute,
+  } as any)
+const StudentExamRegistrationPrintRoute =
+  StudentExamRegistrationPrintRouteImport.update({
+    id: '/exam-registration/print',
+    path: '/exam-registration/print',
+    getParentRoute: () => StudentRoute,
+  } as any)
+const StudentExamRegistrationPaymentRoute =
+  StudentExamRegistrationPaymentRouteImport.update({
+    id: '/exam-registration/payment',
+    path: '/exam-registration/payment',
+    getParentRoute: () => StudentRoute,
+  } as any)
+const StudentExamRegistrationFillRoute =
+  StudentExamRegistrationFillRouteImport.update({
+    id: '/exam-registration/fill',
+    path: '/exam-registration/fill',
+    getParentRoute: () => StudentRoute,
+  } as any)
+const StudentExamRegistrationConfirmRoute =
+  StudentExamRegistrationConfirmRouteImport.update({
+    id: '/exam-registration/confirm',
+    path: '/exam-registration/confirm',
+    getParentRoute: () => StudentRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
   '/student': typeof StudentRouteWithChildren
+  '/student/admission-fee': typeof StudentAdmissionFeeRoute
+  '/student/change-password': typeof StudentChangePasswordRoute
   '/student/dashboard': typeof StudentDashboardRoute
+  '/student/duplicate-id': typeof StudentDuplicateIdRoute
+  '/student/facility-feedback': typeof StudentFacilityFeedbackRoute
+  '/student/online-exam': typeof StudentOnlineExamRoute
+  '/student/payment-history': typeof StudentPaymentHistoryRoute
+  '/student/profile': typeof StudentProfileRoute
+  '/student/result': typeof StudentResultRoute
   '/student/': typeof StudentIndexRoute
+  '/student/exam-registration/confirm': typeof StudentExamRegistrationConfirmRoute
+  '/student/exam-registration/fill': typeof StudentExamRegistrationFillRoute
+  '/student/exam-registration/payment': typeof StudentExamRegistrationPaymentRoute
+  '/student/exam-registration/print': typeof StudentExamRegistrationPrintRoute
+  '/student/exam-registration/receipt': typeof StudentExamRegistrationReceiptRoute
+  '/student/feedback/endterm': typeof StudentFeedbackEndtermRoute
+  '/student/feedback/midterm': typeof StudentFeedbackMidtermRoute
+  '/student/photocopy/confirm': typeof StudentPhotocopyConfirmRoute
+  '/student/photocopy/fill': typeof StudentPhotocopyFillRoute
+  '/student/photocopy/payment': typeof StudentPhotocopyPaymentRoute
+  '/student/photocopy/print': typeof StudentPhotocopyPrintRoute
+  '/student/photocopy/receipt': typeof StudentPhotocopyReceiptRoute
+  '/student/year-wise-result/fy': typeof StudentYearWiseResultFyRoute
+  '/student/year-wise-result/sy': typeof StudentYearWiseResultSyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
+  '/student/admission-fee': typeof StudentAdmissionFeeRoute
+  '/student/change-password': typeof StudentChangePasswordRoute
   '/student/dashboard': typeof StudentDashboardRoute
+  '/student/duplicate-id': typeof StudentDuplicateIdRoute
+  '/student/facility-feedback': typeof StudentFacilityFeedbackRoute
+  '/student/online-exam': typeof StudentOnlineExamRoute
+  '/student/payment-history': typeof StudentPaymentHistoryRoute
+  '/student/profile': typeof StudentProfileRoute
+  '/student/result': typeof StudentResultRoute
   '/student': typeof StudentIndexRoute
+  '/student/exam-registration/confirm': typeof StudentExamRegistrationConfirmRoute
+  '/student/exam-registration/fill': typeof StudentExamRegistrationFillRoute
+  '/student/exam-registration/payment': typeof StudentExamRegistrationPaymentRoute
+  '/student/exam-registration/print': typeof StudentExamRegistrationPrintRoute
+  '/student/exam-registration/receipt': typeof StudentExamRegistrationReceiptRoute
+  '/student/feedback/endterm': typeof StudentFeedbackEndtermRoute
+  '/student/feedback/midterm': typeof StudentFeedbackMidtermRoute
+  '/student/photocopy/confirm': typeof StudentPhotocopyConfirmRoute
+  '/student/photocopy/fill': typeof StudentPhotocopyFillRoute
+  '/student/photocopy/payment': typeof StudentPhotocopyPaymentRoute
+  '/student/photocopy/print': typeof StudentPhotocopyPrintRoute
+  '/student/photocopy/receipt': typeof StudentPhotocopyReceiptRoute
+  '/student/year-wise-result/fy': typeof StudentYearWiseResultFyRoute
+  '/student/year-wise-result/sy': typeof StudentYearWiseResultSyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
   '/student': typeof StudentRouteWithChildren
+  '/student/admission-fee': typeof StudentAdmissionFeeRoute
+  '/student/change-password': typeof StudentChangePasswordRoute
   '/student/dashboard': typeof StudentDashboardRoute
+  '/student/duplicate-id': typeof StudentDuplicateIdRoute
+  '/student/facility-feedback': typeof StudentFacilityFeedbackRoute
+  '/student/online-exam': typeof StudentOnlineExamRoute
+  '/student/payment-history': typeof StudentPaymentHistoryRoute
+  '/student/profile': typeof StudentProfileRoute
+  '/student/result': typeof StudentResultRoute
   '/student/': typeof StudentIndexRoute
+  '/student/exam-registration/confirm': typeof StudentExamRegistrationConfirmRoute
+  '/student/exam-registration/fill': typeof StudentExamRegistrationFillRoute
+  '/student/exam-registration/payment': typeof StudentExamRegistrationPaymentRoute
+  '/student/exam-registration/print': typeof StudentExamRegistrationPrintRoute
+  '/student/exam-registration/receipt': typeof StudentExamRegistrationReceiptRoute
+  '/student/feedback/endterm': typeof StudentFeedbackEndtermRoute
+  '/student/feedback/midterm': typeof StudentFeedbackMidtermRoute
+  '/student/photocopy/confirm': typeof StudentPhotocopyConfirmRoute
+  '/student/photocopy/fill': typeof StudentPhotocopyFillRoute
+  '/student/photocopy/payment': typeof StudentPhotocopyPaymentRoute
+  '/student/photocopy/print': typeof StudentPhotocopyPrintRoute
+  '/student/photocopy/receipt': typeof StudentPhotocopyReceiptRoute
+  '/student/year-wise-result/fy': typeof StudentYearWiseResultFyRoute
+  '/student/year-wise-result/sy': typeof StudentYearWiseResultSyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/login' | '/student' | '/student/dashboard' | '/student/'
+  fullPaths:
+    | '/'
+    | '/login'
+    | '/student'
+    | '/student/admission-fee'
+    | '/student/change-password'
+    | '/student/dashboard'
+    | '/student/duplicate-id'
+    | '/student/facility-feedback'
+    | '/student/online-exam'
+    | '/student/payment-history'
+    | '/student/profile'
+    | '/student/result'
+    | '/student/'
+    | '/student/exam-registration/confirm'
+    | '/student/exam-registration/fill'
+    | '/student/exam-registration/payment'
+    | '/student/exam-registration/print'
+    | '/student/exam-registration/receipt'
+    | '/student/feedback/endterm'
+    | '/student/feedback/midterm'
+    | '/student/photocopy/confirm'
+    | '/student/photocopy/fill'
+    | '/student/photocopy/payment'
+    | '/student/photocopy/print'
+    | '/student/photocopy/receipt'
+    | '/student/year-wise-result/fy'
+    | '/student/year-wise-result/sy'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/login' | '/student/dashboard' | '/student'
+  to:
+    | '/'
+    | '/login'
+    | '/student/admission-fee'
+    | '/student/change-password'
+    | '/student/dashboard'
+    | '/student/duplicate-id'
+    | '/student/facility-feedback'
+    | '/student/online-exam'
+    | '/student/payment-history'
+    | '/student/profile'
+    | '/student/result'
+    | '/student'
+    | '/student/exam-registration/confirm'
+    | '/student/exam-registration/fill'
+    | '/student/exam-registration/payment'
+    | '/student/exam-registration/print'
+    | '/student/exam-registration/receipt'
+    | '/student/feedback/endterm'
+    | '/student/feedback/midterm'
+    | '/student/photocopy/confirm'
+    | '/student/photocopy/fill'
+    | '/student/photocopy/payment'
+    | '/student/photocopy/print'
+    | '/student/photocopy/receipt'
+    | '/student/year-wise-result/fy'
+    | '/student/year-wise-result/sy'
   id:
     | '__root__'
     | '/'
     | '/login'
     | '/student'
+    | '/student/admission-fee'
+    | '/student/change-password'
     | '/student/dashboard'
+    | '/student/duplicate-id'
+    | '/student/facility-feedback'
+    | '/student/online-exam'
+    | '/student/payment-history'
+    | '/student/profile'
+    | '/student/result'
     | '/student/'
+    | '/student/exam-registration/confirm'
+    | '/student/exam-registration/fill'
+    | '/student/exam-registration/payment'
+    | '/student/exam-registration/print'
+    | '/student/exam-registration/receipt'
+    | '/student/feedback/endterm'
+    | '/student/feedback/midterm'
+    | '/student/photocopy/confirm'
+    | '/student/photocopy/fill'
+    | '/student/photocopy/payment'
+    | '/student/photocopy/print'
+    | '/student/photocopy/receipt'
+    | '/student/year-wise-result/fy'
+    | '/student/year-wise-result/sy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -112,6 +390,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StudentIndexRouteImport
       parentRoute: typeof StudentRoute
     }
+    '/student/result': {
+      id: '/student/result'
+      path: '/result'
+      fullPath: '/student/result'
+      preLoaderRoute: typeof StudentResultRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/profile': {
+      id: '/student/profile'
+      path: '/profile'
+      fullPath: '/student/profile'
+      preLoaderRoute: typeof StudentProfileRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/payment-history': {
+      id: '/student/payment-history'
+      path: '/payment-history'
+      fullPath: '/student/payment-history'
+      preLoaderRoute: typeof StudentPaymentHistoryRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/online-exam': {
+      id: '/student/online-exam'
+      path: '/online-exam'
+      fullPath: '/student/online-exam'
+      preLoaderRoute: typeof StudentOnlineExamRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/facility-feedback': {
+      id: '/student/facility-feedback'
+      path: '/facility-feedback'
+      fullPath: '/student/facility-feedback'
+      preLoaderRoute: typeof StudentFacilityFeedbackRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/duplicate-id': {
+      id: '/student/duplicate-id'
+      path: '/duplicate-id'
+      fullPath: '/student/duplicate-id'
+      preLoaderRoute: typeof StudentDuplicateIdRouteImport
+      parentRoute: typeof StudentRoute
+    }
     '/student/dashboard': {
       id: '/student/dashboard'
       path: '/dashboard'
@@ -119,17 +439,173 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StudentDashboardRouteImport
       parentRoute: typeof StudentRoute
     }
+    '/student/change-password': {
+      id: '/student/change-password'
+      path: '/change-password'
+      fullPath: '/student/change-password'
+      preLoaderRoute: typeof StudentChangePasswordRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/admission-fee': {
+      id: '/student/admission-fee'
+      path: '/admission-fee'
+      fullPath: '/student/admission-fee'
+      preLoaderRoute: typeof StudentAdmissionFeeRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/year-wise-result/sy': {
+      id: '/student/year-wise-result/sy'
+      path: '/year-wise-result/sy'
+      fullPath: '/student/year-wise-result/sy'
+      preLoaderRoute: typeof StudentYearWiseResultSyRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/year-wise-result/fy': {
+      id: '/student/year-wise-result/fy'
+      path: '/year-wise-result/fy'
+      fullPath: '/student/year-wise-result/fy'
+      preLoaderRoute: typeof StudentYearWiseResultFyRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/photocopy/receipt': {
+      id: '/student/photocopy/receipt'
+      path: '/photocopy/receipt'
+      fullPath: '/student/photocopy/receipt'
+      preLoaderRoute: typeof StudentPhotocopyReceiptRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/photocopy/print': {
+      id: '/student/photocopy/print'
+      path: '/photocopy/print'
+      fullPath: '/student/photocopy/print'
+      preLoaderRoute: typeof StudentPhotocopyPrintRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/photocopy/payment': {
+      id: '/student/photocopy/payment'
+      path: '/photocopy/payment'
+      fullPath: '/student/photocopy/payment'
+      preLoaderRoute: typeof StudentPhotocopyPaymentRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/photocopy/fill': {
+      id: '/student/photocopy/fill'
+      path: '/photocopy/fill'
+      fullPath: '/student/photocopy/fill'
+      preLoaderRoute: typeof StudentPhotocopyFillRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/photocopy/confirm': {
+      id: '/student/photocopy/confirm'
+      path: '/photocopy/confirm'
+      fullPath: '/student/photocopy/confirm'
+      preLoaderRoute: typeof StudentPhotocopyConfirmRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/feedback/midterm': {
+      id: '/student/feedback/midterm'
+      path: '/feedback/midterm'
+      fullPath: '/student/feedback/midterm'
+      preLoaderRoute: typeof StudentFeedbackMidtermRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/feedback/endterm': {
+      id: '/student/feedback/endterm'
+      path: '/feedback/endterm'
+      fullPath: '/student/feedback/endterm'
+      preLoaderRoute: typeof StudentFeedbackEndtermRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/exam-registration/receipt': {
+      id: '/student/exam-registration/receipt'
+      path: '/exam-registration/receipt'
+      fullPath: '/student/exam-registration/receipt'
+      preLoaderRoute: typeof StudentExamRegistrationReceiptRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/exam-registration/print': {
+      id: '/student/exam-registration/print'
+      path: '/exam-registration/print'
+      fullPath: '/student/exam-registration/print'
+      preLoaderRoute: typeof StudentExamRegistrationPrintRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/exam-registration/payment': {
+      id: '/student/exam-registration/payment'
+      path: '/exam-registration/payment'
+      fullPath: '/student/exam-registration/payment'
+      preLoaderRoute: typeof StudentExamRegistrationPaymentRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/exam-registration/fill': {
+      id: '/student/exam-registration/fill'
+      path: '/exam-registration/fill'
+      fullPath: '/student/exam-registration/fill'
+      preLoaderRoute: typeof StudentExamRegistrationFillRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/exam-registration/confirm': {
+      id: '/student/exam-registration/confirm'
+      path: '/exam-registration/confirm'
+      fullPath: '/student/exam-registration/confirm'
+      preLoaderRoute: typeof StudentExamRegistrationConfirmRouteImport
+      parentRoute: typeof StudentRoute
+    }
   }
 }
 
 interface StudentRouteChildren {
+  StudentAdmissionFeeRoute: typeof StudentAdmissionFeeRoute
+  StudentChangePasswordRoute: typeof StudentChangePasswordRoute
   StudentDashboardRoute: typeof StudentDashboardRoute
+  StudentDuplicateIdRoute: typeof StudentDuplicateIdRoute
+  StudentFacilityFeedbackRoute: typeof StudentFacilityFeedbackRoute
+  StudentOnlineExamRoute: typeof StudentOnlineExamRoute
+  StudentPaymentHistoryRoute: typeof StudentPaymentHistoryRoute
+  StudentProfileRoute: typeof StudentProfileRoute
+  StudentResultRoute: typeof StudentResultRoute
   StudentIndexRoute: typeof StudentIndexRoute
+  StudentExamRegistrationConfirmRoute: typeof StudentExamRegistrationConfirmRoute
+  StudentExamRegistrationFillRoute: typeof StudentExamRegistrationFillRoute
+  StudentExamRegistrationPaymentRoute: typeof StudentExamRegistrationPaymentRoute
+  StudentExamRegistrationPrintRoute: typeof StudentExamRegistrationPrintRoute
+  StudentExamRegistrationReceiptRoute: typeof StudentExamRegistrationReceiptRoute
+  StudentFeedbackEndtermRoute: typeof StudentFeedbackEndtermRoute
+  StudentFeedbackMidtermRoute: typeof StudentFeedbackMidtermRoute
+  StudentPhotocopyConfirmRoute: typeof StudentPhotocopyConfirmRoute
+  StudentPhotocopyFillRoute: typeof StudentPhotocopyFillRoute
+  StudentPhotocopyPaymentRoute: typeof StudentPhotocopyPaymentRoute
+  StudentPhotocopyPrintRoute: typeof StudentPhotocopyPrintRoute
+  StudentPhotocopyReceiptRoute: typeof StudentPhotocopyReceiptRoute
+  StudentYearWiseResultFyRoute: typeof StudentYearWiseResultFyRoute
+  StudentYearWiseResultSyRoute: typeof StudentYearWiseResultSyRoute
 }
 
 const StudentRouteChildren: StudentRouteChildren = {
+  StudentAdmissionFeeRoute: StudentAdmissionFeeRoute,
+  StudentChangePasswordRoute: StudentChangePasswordRoute,
   StudentDashboardRoute: StudentDashboardRoute,
+  StudentDuplicateIdRoute: StudentDuplicateIdRoute,
+  StudentFacilityFeedbackRoute: StudentFacilityFeedbackRoute,
+  StudentOnlineExamRoute: StudentOnlineExamRoute,
+  StudentPaymentHistoryRoute: StudentPaymentHistoryRoute,
+  StudentProfileRoute: StudentProfileRoute,
+  StudentResultRoute: StudentResultRoute,
   StudentIndexRoute: StudentIndexRoute,
+  StudentExamRegistrationConfirmRoute: StudentExamRegistrationConfirmRoute,
+  StudentExamRegistrationFillRoute: StudentExamRegistrationFillRoute,
+  StudentExamRegistrationPaymentRoute: StudentExamRegistrationPaymentRoute,
+  StudentExamRegistrationPrintRoute: StudentExamRegistrationPrintRoute,
+  StudentExamRegistrationReceiptRoute: StudentExamRegistrationReceiptRoute,
+  StudentFeedbackEndtermRoute: StudentFeedbackEndtermRoute,
+  StudentFeedbackMidtermRoute: StudentFeedbackMidtermRoute,
+  StudentPhotocopyConfirmRoute: StudentPhotocopyConfirmRoute,
+  StudentPhotocopyFillRoute: StudentPhotocopyFillRoute,
+  StudentPhotocopyPaymentRoute: StudentPhotocopyPaymentRoute,
+  StudentPhotocopyPrintRoute: StudentPhotocopyPrintRoute,
+  StudentPhotocopyReceiptRoute: StudentPhotocopyReceiptRoute,
+  StudentYearWiseResultFyRoute: StudentYearWiseResultFyRoute,
+  StudentYearWiseResultSyRoute: StudentYearWiseResultSyRoute,
 }
 
 const StudentRouteWithChildren =
