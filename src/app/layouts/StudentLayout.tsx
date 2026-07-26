@@ -4,6 +4,8 @@ import { useQuery } from "@tanstack/react-query";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { AppSidebar } from "@/components/layout/AppSidebar";
+import { StudentProfileCard } from "@/components/layout/StudentProfileCard";
+
 import { STUDENT_NAV } from "@/constants/student-nav";
 import { studentService } from "@/services/student.service";
 import { useAuth } from "@/store/auth";
