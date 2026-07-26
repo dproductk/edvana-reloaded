@@ -11,8 +11,10 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as StudentRouteImport } from './routes/student'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as FacultyRouteImport } from './routes/faculty'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as StudentIndexRouteImport } from './routes/student.index'
+import { Route as FacultyIndexRouteImport } from './routes/faculty.index'
 import { Route as StudentResultRouteImport } from './routes/student.result'
 import { Route as StudentProfileRouteImport } from './routes/student.profile'
 import { Route as StudentPaymentHistoryRouteImport } from './routes/student.payment-history'
@@ -22,6 +24,10 @@ import { Route as StudentDuplicateIdRouteImport } from './routes/student.duplica
 import { Route as StudentDashboardRouteImport } from './routes/student.dashboard'
 import { Route as StudentChangePasswordRouteImport } from './routes/student.change-password'
 import { Route as StudentAdmissionFeeRouteImport } from './routes/student.admission-fee'
+import { Route as FacultyProfileRouteImport } from './routes/faculty.profile'
+import { Route as FacultyExamResultHistoryRouteImport } from './routes/faculty.exam-result-history'
+import { Route as FacultyDashboardRouteImport } from './routes/faculty.dashboard'
+import { Route as FacultyChangePasswordRouteImport } from './routes/faculty.change-password'
 import { Route as StudentYearWiseResultSyRouteImport } from './routes/student.year-wise-result.sy'
 import { Route as StudentYearWiseResultFyRouteImport } from './routes/student.year-wise-result.fy'
 import { Route as StudentPhotocopyReceiptRouteImport } from './routes/student.photocopy.receipt'
@@ -36,6 +42,28 @@ import { Route as StudentExamRegistrationPrintRouteImport } from './routes/stude
 import { Route as StudentExamRegistrationPaymentRouteImport } from './routes/student.exam-registration.payment'
 import { Route as StudentExamRegistrationFillRouteImport } from './routes/student.exam-registration.fill'
 import { Route as StudentExamRegistrationConfirmRouteImport } from './routes/student.exam-registration.confirm'
+import { Route as FacultyStudentsRegistrationListRouteImport } from './routes/faculty.students.registration-list'
+import { Route as FacultyStudentsRegisteredRouteImport } from './routes/faculty.students.registered'
+import { Route as FacultyStudentsEligibleRouteImport } from './routes/faculty.students.eligible'
+import { Route as FacultyStudentsCourseWiseSaprRouteImport } from './routes/faculty.students.course-wise-sapr'
+import { Route as FacultyStudentsCourseWiseRouteImport } from './routes/faculty.students.course-wise'
+import { Route as FacultyResultAnalysisWinter2025RouteImport } from './routes/faculty.result-analysis.winter-2025'
+import { Route as FacultyResultAnalysisSummer2026RouteImport } from './routes/faculty.result-analysis.summer-2026'
+import { Route as FacultyResultAnalysisSummer2025RouteImport } from './routes/faculty.result-analysis.summer-2025'
+import { Route as FacultyResultAnalysisBitwiseMarksRouteImport } from './routes/faculty.result-analysis.bitwise-marks'
+import { Route as FacultyOnlineExamQuestionBankRouteImport } from './routes/faculty.online-exam.question-bank'
+import { Route as FacultyLacTheoryExamRouteImport } from './routes/faculty.lac.theory-exam'
+import { Route as FacultyAdmissionEligibleTyRouteImport } from './routes/faculty.admission.eligible-ty'
+import { Route as FacultyAdmissionEligibleSyRouteImport } from './routes/faculty.admission.eligible-sy'
+import { Route as FacultyAdmissionEligibleFyRouteImport } from './routes/faculty.admission.eligible-fy'
+import { Route as FacultyAdmissionAdmitted202627RouteImport } from './routes/faculty.admission.admitted-2026-27'
+import { Route as FacultyAdmissionAdmitted202526RouteImport } from './routes/faculty.admission.admitted-2025-26'
+import { Route as FacultyWorkloadMarksEntryFillRouteImport } from './routes/faculty.workload.marks-entry.fill'
+import { Route as FacultyWorkloadDetentionsProvisionalRouteImport } from './routes/faculty.workload.detentions.provisional'
+import { Route as FacultyWorkloadDetentionsNilListRouteImport } from './routes/faculty.workload.detentions.nil-list'
+import { Route as FacultyWorkloadDetentionsNilAddRouteImport } from './routes/faculty.workload.detentions.nil-add'
+import { Route as FacultyWorkloadDetentionsFinalRouteImport } from './routes/faculty.workload.detentions.final'
+import { Route as FacultyWorkloadDetentionsAddRouteImport } from './routes/faculty.workload.detentions.add'
 
 const StudentRoute = StudentRouteImport.update({
   id: '/student',
@@ -47,6 +75,11 @@ const LoginRoute = LoginRouteImport.update({
   path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FacultyRoute = FacultyRouteImport.update({
+  id: '/faculty',
+  path: '/faculty',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -56,6 +89,11 @@ const StudentIndexRoute = StudentIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => StudentRoute,
+} as any)
+const FacultyIndexRoute = FacultyIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => FacultyRoute,
 } as any)
 const StudentResultRoute = StudentResultRouteImport.update({
   id: '/result',
@@ -101,6 +139,27 @@ const StudentAdmissionFeeRoute = StudentAdmissionFeeRouteImport.update({
   id: '/admission-fee',
   path: '/admission-fee',
   getParentRoute: () => StudentRoute,
+} as any)
+const FacultyProfileRoute = FacultyProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => FacultyRoute,
+} as any)
+const FacultyExamResultHistoryRoute =
+  FacultyExamResultHistoryRouteImport.update({
+    id: '/exam-result-history',
+    path: '/exam-result-history',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyDashboardRoute = FacultyDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => FacultyRoute,
+} as any)
+const FacultyChangePasswordRoute = FacultyChangePasswordRouteImport.update({
+  id: '/change-password',
+  path: '/change-password',
+  getParentRoute: () => FacultyRoute,
 } as any)
 const StudentYearWiseResultSyRoute = StudentYearWiseResultSyRouteImport.update({
   id: '/year-wise-result/sy',
@@ -177,11 +236,146 @@ const StudentExamRegistrationConfirmRoute =
     path: '/exam-registration/confirm',
     getParentRoute: () => StudentRoute,
   } as any)
+const FacultyStudentsRegistrationListRoute =
+  FacultyStudentsRegistrationListRouteImport.update({
+    id: '/students/registration-list',
+    path: '/students/registration-list',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyStudentsRegisteredRoute =
+  FacultyStudentsRegisteredRouteImport.update({
+    id: '/students/registered',
+    path: '/students/registered',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyStudentsEligibleRoute = FacultyStudentsEligibleRouteImport.update({
+  id: '/students/eligible',
+  path: '/students/eligible',
+  getParentRoute: () => FacultyRoute,
+} as any)
+const FacultyStudentsCourseWiseSaprRoute =
+  FacultyStudentsCourseWiseSaprRouteImport.update({
+    id: '/students/course-wise-sapr',
+    path: '/students/course-wise-sapr',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyStudentsCourseWiseRoute =
+  FacultyStudentsCourseWiseRouteImport.update({
+    id: '/students/course-wise',
+    path: '/students/course-wise',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyResultAnalysisWinter2025Route =
+  FacultyResultAnalysisWinter2025RouteImport.update({
+    id: '/result-analysis/winter-2025',
+    path: '/result-analysis/winter-2025',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyResultAnalysisSummer2026Route =
+  FacultyResultAnalysisSummer2026RouteImport.update({
+    id: '/result-analysis/summer-2026',
+    path: '/result-analysis/summer-2026',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyResultAnalysisSummer2025Route =
+  FacultyResultAnalysisSummer2025RouteImport.update({
+    id: '/result-analysis/summer-2025',
+    path: '/result-analysis/summer-2025',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyResultAnalysisBitwiseMarksRoute =
+  FacultyResultAnalysisBitwiseMarksRouteImport.update({
+    id: '/result-analysis/bitwise-marks',
+    path: '/result-analysis/bitwise-marks',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyOnlineExamQuestionBankRoute =
+  FacultyOnlineExamQuestionBankRouteImport.update({
+    id: '/online-exam/question-bank',
+    path: '/online-exam/question-bank',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyLacTheoryExamRoute = FacultyLacTheoryExamRouteImport.update({
+  id: '/lac/theory-exam',
+  path: '/lac/theory-exam',
+  getParentRoute: () => FacultyRoute,
+} as any)
+const FacultyAdmissionEligibleTyRoute =
+  FacultyAdmissionEligibleTyRouteImport.update({
+    id: '/admission/eligible-ty',
+    path: '/admission/eligible-ty',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyAdmissionEligibleSyRoute =
+  FacultyAdmissionEligibleSyRouteImport.update({
+    id: '/admission/eligible-sy',
+    path: '/admission/eligible-sy',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyAdmissionEligibleFyRoute =
+  FacultyAdmissionEligibleFyRouteImport.update({
+    id: '/admission/eligible-fy',
+    path: '/admission/eligible-fy',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyAdmissionAdmitted202627Route =
+  FacultyAdmissionAdmitted202627RouteImport.update({
+    id: '/admission/admitted-2026-27',
+    path: '/admission/admitted-2026-27',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyAdmissionAdmitted202526Route =
+  FacultyAdmissionAdmitted202526RouteImport.update({
+    id: '/admission/admitted-2025-26',
+    path: '/admission/admitted-2025-26',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyWorkloadMarksEntryFillRoute =
+  FacultyWorkloadMarksEntryFillRouteImport.update({
+    id: '/workload/marks-entry/fill',
+    path: '/workload/marks-entry/fill',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyWorkloadDetentionsProvisionalRoute =
+  FacultyWorkloadDetentionsProvisionalRouteImport.update({
+    id: '/workload/detentions/provisional',
+    path: '/workload/detentions/provisional',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyWorkloadDetentionsNilListRoute =
+  FacultyWorkloadDetentionsNilListRouteImport.update({
+    id: '/workload/detentions/nil-list',
+    path: '/workload/detentions/nil-list',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyWorkloadDetentionsNilAddRoute =
+  FacultyWorkloadDetentionsNilAddRouteImport.update({
+    id: '/workload/detentions/nil-add',
+    path: '/workload/detentions/nil-add',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyWorkloadDetentionsFinalRoute =
+  FacultyWorkloadDetentionsFinalRouteImport.update({
+    id: '/workload/detentions/final',
+    path: '/workload/detentions/final',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyWorkloadDetentionsAddRoute =
+  FacultyWorkloadDetentionsAddRouteImport.update({
+    id: '/workload/detentions/add',
+    path: '/workload/detentions/add',
+    getParentRoute: () => FacultyRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/faculty': typeof FacultyRouteWithChildren
   '/login': typeof LoginRoute
   '/student': typeof StudentRouteWithChildren
+  '/faculty/change-password': typeof FacultyChangePasswordRoute
+  '/faculty/dashboard': typeof FacultyDashboardRoute
+  '/faculty/exam-result-history': typeof FacultyExamResultHistoryRoute
+  '/faculty/profile': typeof FacultyProfileRoute
   '/student/admission-fee': typeof StudentAdmissionFeeRoute
   '/student/change-password': typeof StudentChangePasswordRoute
   '/student/dashboard': typeof StudentDashboardRoute
@@ -191,7 +385,24 @@ export interface FileRoutesByFullPath {
   '/student/payment-history': typeof StudentPaymentHistoryRoute
   '/student/profile': typeof StudentProfileRoute
   '/student/result': typeof StudentResultRoute
+  '/faculty/': typeof FacultyIndexRoute
   '/student/': typeof StudentIndexRoute
+  '/faculty/admission/admitted-2025-26': typeof FacultyAdmissionAdmitted202526Route
+  '/faculty/admission/admitted-2026-27': typeof FacultyAdmissionAdmitted202627Route
+  '/faculty/admission/eligible-fy': typeof FacultyAdmissionEligibleFyRoute
+  '/faculty/admission/eligible-sy': typeof FacultyAdmissionEligibleSyRoute
+  '/faculty/admission/eligible-ty': typeof FacultyAdmissionEligibleTyRoute
+  '/faculty/lac/theory-exam': typeof FacultyLacTheoryExamRoute
+  '/faculty/online-exam/question-bank': typeof FacultyOnlineExamQuestionBankRoute
+  '/faculty/result-analysis/bitwise-marks': typeof FacultyResultAnalysisBitwiseMarksRoute
+  '/faculty/result-analysis/summer-2025': typeof FacultyResultAnalysisSummer2025Route
+  '/faculty/result-analysis/summer-2026': typeof FacultyResultAnalysisSummer2026Route
+  '/faculty/result-analysis/winter-2025': typeof FacultyResultAnalysisWinter2025Route
+  '/faculty/students/course-wise': typeof FacultyStudentsCourseWiseRoute
+  '/faculty/students/course-wise-sapr': typeof FacultyStudentsCourseWiseSaprRoute
+  '/faculty/students/eligible': typeof FacultyStudentsEligibleRoute
+  '/faculty/students/registered': typeof FacultyStudentsRegisteredRoute
+  '/faculty/students/registration-list': typeof FacultyStudentsRegistrationListRoute
   '/student/exam-registration/confirm': typeof StudentExamRegistrationConfirmRoute
   '/student/exam-registration/fill': typeof StudentExamRegistrationFillRoute
   '/student/exam-registration/payment': typeof StudentExamRegistrationPaymentRoute
@@ -206,10 +417,20 @@ export interface FileRoutesByFullPath {
   '/student/photocopy/receipt': typeof StudentPhotocopyReceiptRoute
   '/student/year-wise-result/fy': typeof StudentYearWiseResultFyRoute
   '/student/year-wise-result/sy': typeof StudentYearWiseResultSyRoute
+  '/faculty/workload/detentions/add': typeof FacultyWorkloadDetentionsAddRoute
+  '/faculty/workload/detentions/final': typeof FacultyWorkloadDetentionsFinalRoute
+  '/faculty/workload/detentions/nil-add': typeof FacultyWorkloadDetentionsNilAddRoute
+  '/faculty/workload/detentions/nil-list': typeof FacultyWorkloadDetentionsNilListRoute
+  '/faculty/workload/detentions/provisional': typeof FacultyWorkloadDetentionsProvisionalRoute
+  '/faculty/workload/marks-entry/fill': typeof FacultyWorkloadMarksEntryFillRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
+  '/faculty/change-password': typeof FacultyChangePasswordRoute
+  '/faculty/dashboard': typeof FacultyDashboardRoute
+  '/faculty/exam-result-history': typeof FacultyExamResultHistoryRoute
+  '/faculty/profile': typeof FacultyProfileRoute
   '/student/admission-fee': typeof StudentAdmissionFeeRoute
   '/student/change-password': typeof StudentChangePasswordRoute
   '/student/dashboard': typeof StudentDashboardRoute
@@ -219,7 +440,24 @@ export interface FileRoutesByTo {
   '/student/payment-history': typeof StudentPaymentHistoryRoute
   '/student/profile': typeof StudentProfileRoute
   '/student/result': typeof StudentResultRoute
+  '/faculty': typeof FacultyIndexRoute
   '/student': typeof StudentIndexRoute
+  '/faculty/admission/admitted-2025-26': typeof FacultyAdmissionAdmitted202526Route
+  '/faculty/admission/admitted-2026-27': typeof FacultyAdmissionAdmitted202627Route
+  '/faculty/admission/eligible-fy': typeof FacultyAdmissionEligibleFyRoute
+  '/faculty/admission/eligible-sy': typeof FacultyAdmissionEligibleSyRoute
+  '/faculty/admission/eligible-ty': typeof FacultyAdmissionEligibleTyRoute
+  '/faculty/lac/theory-exam': typeof FacultyLacTheoryExamRoute
+  '/faculty/online-exam/question-bank': typeof FacultyOnlineExamQuestionBankRoute
+  '/faculty/result-analysis/bitwise-marks': typeof FacultyResultAnalysisBitwiseMarksRoute
+  '/faculty/result-analysis/summer-2025': typeof FacultyResultAnalysisSummer2025Route
+  '/faculty/result-analysis/summer-2026': typeof FacultyResultAnalysisSummer2026Route
+  '/faculty/result-analysis/winter-2025': typeof FacultyResultAnalysisWinter2025Route
+  '/faculty/students/course-wise': typeof FacultyStudentsCourseWiseRoute
+  '/faculty/students/course-wise-sapr': typeof FacultyStudentsCourseWiseSaprRoute
+  '/faculty/students/eligible': typeof FacultyStudentsEligibleRoute
+  '/faculty/students/registered': typeof FacultyStudentsRegisteredRoute
+  '/faculty/students/registration-list': typeof FacultyStudentsRegistrationListRoute
   '/student/exam-registration/confirm': typeof StudentExamRegistrationConfirmRoute
   '/student/exam-registration/fill': typeof StudentExamRegistrationFillRoute
   '/student/exam-registration/payment': typeof StudentExamRegistrationPaymentRoute
@@ -234,12 +472,23 @@ export interface FileRoutesByTo {
   '/student/photocopy/receipt': typeof StudentPhotocopyReceiptRoute
   '/student/year-wise-result/fy': typeof StudentYearWiseResultFyRoute
   '/student/year-wise-result/sy': typeof StudentYearWiseResultSyRoute
+  '/faculty/workload/detentions/add': typeof FacultyWorkloadDetentionsAddRoute
+  '/faculty/workload/detentions/final': typeof FacultyWorkloadDetentionsFinalRoute
+  '/faculty/workload/detentions/nil-add': typeof FacultyWorkloadDetentionsNilAddRoute
+  '/faculty/workload/detentions/nil-list': typeof FacultyWorkloadDetentionsNilListRoute
+  '/faculty/workload/detentions/provisional': typeof FacultyWorkloadDetentionsProvisionalRoute
+  '/faculty/workload/marks-entry/fill': typeof FacultyWorkloadMarksEntryFillRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/faculty': typeof FacultyRouteWithChildren
   '/login': typeof LoginRoute
   '/student': typeof StudentRouteWithChildren
+  '/faculty/change-password': typeof FacultyChangePasswordRoute
+  '/faculty/dashboard': typeof FacultyDashboardRoute
+  '/faculty/exam-result-history': typeof FacultyExamResultHistoryRoute
+  '/faculty/profile': typeof FacultyProfileRoute
   '/student/admission-fee': typeof StudentAdmissionFeeRoute
   '/student/change-password': typeof StudentChangePasswordRoute
   '/student/dashboard': typeof StudentDashboardRoute
@@ -249,7 +498,24 @@ export interface FileRoutesById {
   '/student/payment-history': typeof StudentPaymentHistoryRoute
   '/student/profile': typeof StudentProfileRoute
   '/student/result': typeof StudentResultRoute
+  '/faculty/': typeof FacultyIndexRoute
   '/student/': typeof StudentIndexRoute
+  '/faculty/admission/admitted-2025-26': typeof FacultyAdmissionAdmitted202526Route
+  '/faculty/admission/admitted-2026-27': typeof FacultyAdmissionAdmitted202627Route
+  '/faculty/admission/eligible-fy': typeof FacultyAdmissionEligibleFyRoute
+  '/faculty/admission/eligible-sy': typeof FacultyAdmissionEligibleSyRoute
+  '/faculty/admission/eligible-ty': typeof FacultyAdmissionEligibleTyRoute
+  '/faculty/lac/theory-exam': typeof FacultyLacTheoryExamRoute
+  '/faculty/online-exam/question-bank': typeof FacultyOnlineExamQuestionBankRoute
+  '/faculty/result-analysis/bitwise-marks': typeof FacultyResultAnalysisBitwiseMarksRoute
+  '/faculty/result-analysis/summer-2025': typeof FacultyResultAnalysisSummer2025Route
+  '/faculty/result-analysis/summer-2026': typeof FacultyResultAnalysisSummer2026Route
+  '/faculty/result-analysis/winter-2025': typeof FacultyResultAnalysisWinter2025Route
+  '/faculty/students/course-wise': typeof FacultyStudentsCourseWiseRoute
+  '/faculty/students/course-wise-sapr': typeof FacultyStudentsCourseWiseSaprRoute
+  '/faculty/students/eligible': typeof FacultyStudentsEligibleRoute
+  '/faculty/students/registered': typeof FacultyStudentsRegisteredRoute
+  '/faculty/students/registration-list': typeof FacultyStudentsRegistrationListRoute
   '/student/exam-registration/confirm': typeof StudentExamRegistrationConfirmRoute
   '/student/exam-registration/fill': typeof StudentExamRegistrationFillRoute
   '/student/exam-registration/payment': typeof StudentExamRegistrationPaymentRoute
@@ -264,13 +530,24 @@ export interface FileRoutesById {
   '/student/photocopy/receipt': typeof StudentPhotocopyReceiptRoute
   '/student/year-wise-result/fy': typeof StudentYearWiseResultFyRoute
   '/student/year-wise-result/sy': typeof StudentYearWiseResultSyRoute
+  '/faculty/workload/detentions/add': typeof FacultyWorkloadDetentionsAddRoute
+  '/faculty/workload/detentions/final': typeof FacultyWorkloadDetentionsFinalRoute
+  '/faculty/workload/detentions/nil-add': typeof FacultyWorkloadDetentionsNilAddRoute
+  '/faculty/workload/detentions/nil-list': typeof FacultyWorkloadDetentionsNilListRoute
+  '/faculty/workload/detentions/provisional': typeof FacultyWorkloadDetentionsProvisionalRoute
+  '/faculty/workload/marks-entry/fill': typeof FacultyWorkloadMarksEntryFillRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/faculty'
     | '/login'
     | '/student'
+    | '/faculty/change-password'
+    | '/faculty/dashboard'
+    | '/faculty/exam-result-history'
+    | '/faculty/profile'
     | '/student/admission-fee'
     | '/student/change-password'
     | '/student/dashboard'
@@ -280,7 +557,24 @@ export interface FileRouteTypes {
     | '/student/payment-history'
     | '/student/profile'
     | '/student/result'
+    | '/faculty/'
     | '/student/'
+    | '/faculty/admission/admitted-2025-26'
+    | '/faculty/admission/admitted-2026-27'
+    | '/faculty/admission/eligible-fy'
+    | '/faculty/admission/eligible-sy'
+    | '/faculty/admission/eligible-ty'
+    | '/faculty/lac/theory-exam'
+    | '/faculty/online-exam/question-bank'
+    | '/faculty/result-analysis/bitwise-marks'
+    | '/faculty/result-analysis/summer-2025'
+    | '/faculty/result-analysis/summer-2026'
+    | '/faculty/result-analysis/winter-2025'
+    | '/faculty/students/course-wise'
+    | '/faculty/students/course-wise-sapr'
+    | '/faculty/students/eligible'
+    | '/faculty/students/registered'
+    | '/faculty/students/registration-list'
     | '/student/exam-registration/confirm'
     | '/student/exam-registration/fill'
     | '/student/exam-registration/payment'
@@ -295,10 +589,20 @@ export interface FileRouteTypes {
     | '/student/photocopy/receipt'
     | '/student/year-wise-result/fy'
     | '/student/year-wise-result/sy'
+    | '/faculty/workload/detentions/add'
+    | '/faculty/workload/detentions/final'
+    | '/faculty/workload/detentions/nil-add'
+    | '/faculty/workload/detentions/nil-list'
+    | '/faculty/workload/detentions/provisional'
+    | '/faculty/workload/marks-entry/fill'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/login'
+    | '/faculty/change-password'
+    | '/faculty/dashboard'
+    | '/faculty/exam-result-history'
+    | '/faculty/profile'
     | '/student/admission-fee'
     | '/student/change-password'
     | '/student/dashboard'
@@ -308,7 +612,24 @@ export interface FileRouteTypes {
     | '/student/payment-history'
     | '/student/profile'
     | '/student/result'
+    | '/faculty'
     | '/student'
+    | '/faculty/admission/admitted-2025-26'
+    | '/faculty/admission/admitted-2026-27'
+    | '/faculty/admission/eligible-fy'
+    | '/faculty/admission/eligible-sy'
+    | '/faculty/admission/eligible-ty'
+    | '/faculty/lac/theory-exam'
+    | '/faculty/online-exam/question-bank'
+    | '/faculty/result-analysis/bitwise-marks'
+    | '/faculty/result-analysis/summer-2025'
+    | '/faculty/result-analysis/summer-2026'
+    | '/faculty/result-analysis/winter-2025'
+    | '/faculty/students/course-wise'
+    | '/faculty/students/course-wise-sapr'
+    | '/faculty/students/eligible'
+    | '/faculty/students/registered'
+    | '/faculty/students/registration-list'
     | '/student/exam-registration/confirm'
     | '/student/exam-registration/fill'
     | '/student/exam-registration/payment'
@@ -323,11 +644,22 @@ export interface FileRouteTypes {
     | '/student/photocopy/receipt'
     | '/student/year-wise-result/fy'
     | '/student/year-wise-result/sy'
+    | '/faculty/workload/detentions/add'
+    | '/faculty/workload/detentions/final'
+    | '/faculty/workload/detentions/nil-add'
+    | '/faculty/workload/detentions/nil-list'
+    | '/faculty/workload/detentions/provisional'
+    | '/faculty/workload/marks-entry/fill'
   id:
     | '__root__'
     | '/'
+    | '/faculty'
     | '/login'
     | '/student'
+    | '/faculty/change-password'
+    | '/faculty/dashboard'
+    | '/faculty/exam-result-history'
+    | '/faculty/profile'
     | '/student/admission-fee'
     | '/student/change-password'
     | '/student/dashboard'
@@ -337,7 +669,24 @@ export interface FileRouteTypes {
     | '/student/payment-history'
     | '/student/profile'
     | '/student/result'
+    | '/faculty/'
     | '/student/'
+    | '/faculty/admission/admitted-2025-26'
+    | '/faculty/admission/admitted-2026-27'
+    | '/faculty/admission/eligible-fy'
+    | '/faculty/admission/eligible-sy'
+    | '/faculty/admission/eligible-ty'
+    | '/faculty/lac/theory-exam'
+    | '/faculty/online-exam/question-bank'
+    | '/faculty/result-analysis/bitwise-marks'
+    | '/faculty/result-analysis/summer-2025'
+    | '/faculty/result-analysis/summer-2026'
+    | '/faculty/result-analysis/winter-2025'
+    | '/faculty/students/course-wise'
+    | '/faculty/students/course-wise-sapr'
+    | '/faculty/students/eligible'
+    | '/faculty/students/registered'
+    | '/faculty/students/registration-list'
     | '/student/exam-registration/confirm'
     | '/student/exam-registration/fill'
     | '/student/exam-registration/payment'
@@ -352,10 +701,17 @@ export interface FileRouteTypes {
     | '/student/photocopy/receipt'
     | '/student/year-wise-result/fy'
     | '/student/year-wise-result/sy'
+    | '/faculty/workload/detentions/add'
+    | '/faculty/workload/detentions/final'
+    | '/faculty/workload/detentions/nil-add'
+    | '/faculty/workload/detentions/nil-list'
+    | '/faculty/workload/detentions/provisional'
+    | '/faculty/workload/marks-entry/fill'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FacultyRoute: typeof FacultyRouteWithChildren
   LoginRoute: typeof LoginRoute
   StudentRoute: typeof StudentRouteWithChildren
 }
@@ -376,6 +732,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faculty': {
+      id: '/faculty'
+      path: '/faculty'
+      fullPath: '/faculty'
+      preLoaderRoute: typeof FacultyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -389,6 +752,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/student/'
       preLoaderRoute: typeof StudentIndexRouteImport
       parentRoute: typeof StudentRoute
+    }
+    '/faculty/': {
+      id: '/faculty/'
+      path: '/'
+      fullPath: '/faculty/'
+      preLoaderRoute: typeof FacultyIndexRouteImport
+      parentRoute: typeof FacultyRoute
     }
     '/student/result': {
       id: '/student/result'
@@ -452,6 +822,34 @@ declare module '@tanstack/react-router' {
       fullPath: '/student/admission-fee'
       preLoaderRoute: typeof StudentAdmissionFeeRouteImport
       parentRoute: typeof StudentRoute
+    }
+    '/faculty/profile': {
+      id: '/faculty/profile'
+      path: '/profile'
+      fullPath: '/faculty/profile'
+      preLoaderRoute: typeof FacultyProfileRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/exam-result-history': {
+      id: '/faculty/exam-result-history'
+      path: '/exam-result-history'
+      fullPath: '/faculty/exam-result-history'
+      preLoaderRoute: typeof FacultyExamResultHistoryRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/dashboard': {
+      id: '/faculty/dashboard'
+      path: '/dashboard'
+      fullPath: '/faculty/dashboard'
+      preLoaderRoute: typeof FacultyDashboardRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/change-password': {
+      id: '/faculty/change-password'
+      path: '/change-password'
+      fullPath: '/faculty/change-password'
+      preLoaderRoute: typeof FacultyChangePasswordRouteImport
+      parentRoute: typeof FacultyRoute
     }
     '/student/year-wise-result/sy': {
       id: '/student/year-wise-result/sy'
@@ -551,8 +949,227 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StudentExamRegistrationConfirmRouteImport
       parentRoute: typeof StudentRoute
     }
+    '/faculty/students/registration-list': {
+      id: '/faculty/students/registration-list'
+      path: '/students/registration-list'
+      fullPath: '/faculty/students/registration-list'
+      preLoaderRoute: typeof FacultyStudentsRegistrationListRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/students/registered': {
+      id: '/faculty/students/registered'
+      path: '/students/registered'
+      fullPath: '/faculty/students/registered'
+      preLoaderRoute: typeof FacultyStudentsRegisteredRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/students/eligible': {
+      id: '/faculty/students/eligible'
+      path: '/students/eligible'
+      fullPath: '/faculty/students/eligible'
+      preLoaderRoute: typeof FacultyStudentsEligibleRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/students/course-wise-sapr': {
+      id: '/faculty/students/course-wise-sapr'
+      path: '/students/course-wise-sapr'
+      fullPath: '/faculty/students/course-wise-sapr'
+      preLoaderRoute: typeof FacultyStudentsCourseWiseSaprRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/students/course-wise': {
+      id: '/faculty/students/course-wise'
+      path: '/students/course-wise'
+      fullPath: '/faculty/students/course-wise'
+      preLoaderRoute: typeof FacultyStudentsCourseWiseRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/result-analysis/winter-2025': {
+      id: '/faculty/result-analysis/winter-2025'
+      path: '/result-analysis/winter-2025'
+      fullPath: '/faculty/result-analysis/winter-2025'
+      preLoaderRoute: typeof FacultyResultAnalysisWinter2025RouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/result-analysis/summer-2026': {
+      id: '/faculty/result-analysis/summer-2026'
+      path: '/result-analysis/summer-2026'
+      fullPath: '/faculty/result-analysis/summer-2026'
+      preLoaderRoute: typeof FacultyResultAnalysisSummer2026RouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/result-analysis/summer-2025': {
+      id: '/faculty/result-analysis/summer-2025'
+      path: '/result-analysis/summer-2025'
+      fullPath: '/faculty/result-analysis/summer-2025'
+      preLoaderRoute: typeof FacultyResultAnalysisSummer2025RouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/result-analysis/bitwise-marks': {
+      id: '/faculty/result-analysis/bitwise-marks'
+      path: '/result-analysis/bitwise-marks'
+      fullPath: '/faculty/result-analysis/bitwise-marks'
+      preLoaderRoute: typeof FacultyResultAnalysisBitwiseMarksRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/online-exam/question-bank': {
+      id: '/faculty/online-exam/question-bank'
+      path: '/online-exam/question-bank'
+      fullPath: '/faculty/online-exam/question-bank'
+      preLoaderRoute: typeof FacultyOnlineExamQuestionBankRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/lac/theory-exam': {
+      id: '/faculty/lac/theory-exam'
+      path: '/lac/theory-exam'
+      fullPath: '/faculty/lac/theory-exam'
+      preLoaderRoute: typeof FacultyLacTheoryExamRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/admission/eligible-ty': {
+      id: '/faculty/admission/eligible-ty'
+      path: '/admission/eligible-ty'
+      fullPath: '/faculty/admission/eligible-ty'
+      preLoaderRoute: typeof FacultyAdmissionEligibleTyRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/admission/eligible-sy': {
+      id: '/faculty/admission/eligible-sy'
+      path: '/admission/eligible-sy'
+      fullPath: '/faculty/admission/eligible-sy'
+      preLoaderRoute: typeof FacultyAdmissionEligibleSyRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/admission/eligible-fy': {
+      id: '/faculty/admission/eligible-fy'
+      path: '/admission/eligible-fy'
+      fullPath: '/faculty/admission/eligible-fy'
+      preLoaderRoute: typeof FacultyAdmissionEligibleFyRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/admission/admitted-2026-27': {
+      id: '/faculty/admission/admitted-2026-27'
+      path: '/admission/admitted-2026-27'
+      fullPath: '/faculty/admission/admitted-2026-27'
+      preLoaderRoute: typeof FacultyAdmissionAdmitted202627RouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/admission/admitted-2025-26': {
+      id: '/faculty/admission/admitted-2025-26'
+      path: '/admission/admitted-2025-26'
+      fullPath: '/faculty/admission/admitted-2025-26'
+      preLoaderRoute: typeof FacultyAdmissionAdmitted202526RouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/workload/marks-entry/fill': {
+      id: '/faculty/workload/marks-entry/fill'
+      path: '/workload/marks-entry/fill'
+      fullPath: '/faculty/workload/marks-entry/fill'
+      preLoaderRoute: typeof FacultyWorkloadMarksEntryFillRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/workload/detentions/provisional': {
+      id: '/faculty/workload/detentions/provisional'
+      path: '/workload/detentions/provisional'
+      fullPath: '/faculty/workload/detentions/provisional'
+      preLoaderRoute: typeof FacultyWorkloadDetentionsProvisionalRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/workload/detentions/nil-list': {
+      id: '/faculty/workload/detentions/nil-list'
+      path: '/workload/detentions/nil-list'
+      fullPath: '/faculty/workload/detentions/nil-list'
+      preLoaderRoute: typeof FacultyWorkloadDetentionsNilListRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/workload/detentions/nil-add': {
+      id: '/faculty/workload/detentions/nil-add'
+      path: '/workload/detentions/nil-add'
+      fullPath: '/faculty/workload/detentions/nil-add'
+      preLoaderRoute: typeof FacultyWorkloadDetentionsNilAddRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/workload/detentions/final': {
+      id: '/faculty/workload/detentions/final'
+      path: '/workload/detentions/final'
+      fullPath: '/faculty/workload/detentions/final'
+      preLoaderRoute: typeof FacultyWorkloadDetentionsFinalRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/workload/detentions/add': {
+      id: '/faculty/workload/detentions/add'
+      path: '/workload/detentions/add'
+      fullPath: '/faculty/workload/detentions/add'
+      preLoaderRoute: typeof FacultyWorkloadDetentionsAddRouteImport
+      parentRoute: typeof FacultyRoute
+    }
   }
 }
+
+interface FacultyRouteChildren {
+  FacultyChangePasswordRoute: typeof FacultyChangePasswordRoute
+  FacultyDashboardRoute: typeof FacultyDashboardRoute
+  FacultyExamResultHistoryRoute: typeof FacultyExamResultHistoryRoute
+  FacultyProfileRoute: typeof FacultyProfileRoute
+  FacultyIndexRoute: typeof FacultyIndexRoute
+  FacultyAdmissionAdmitted202526Route: typeof FacultyAdmissionAdmitted202526Route
+  FacultyAdmissionAdmitted202627Route: typeof FacultyAdmissionAdmitted202627Route
+  FacultyAdmissionEligibleFyRoute: typeof FacultyAdmissionEligibleFyRoute
+  FacultyAdmissionEligibleSyRoute: typeof FacultyAdmissionEligibleSyRoute
+  FacultyAdmissionEligibleTyRoute: typeof FacultyAdmissionEligibleTyRoute
+  FacultyLacTheoryExamRoute: typeof FacultyLacTheoryExamRoute
+  FacultyOnlineExamQuestionBankRoute: typeof FacultyOnlineExamQuestionBankRoute
+  FacultyResultAnalysisBitwiseMarksRoute: typeof FacultyResultAnalysisBitwiseMarksRoute
+  FacultyResultAnalysisSummer2025Route: typeof FacultyResultAnalysisSummer2025Route
+  FacultyResultAnalysisSummer2026Route: typeof FacultyResultAnalysisSummer2026Route
+  FacultyResultAnalysisWinter2025Route: typeof FacultyResultAnalysisWinter2025Route
+  FacultyStudentsCourseWiseRoute: typeof FacultyStudentsCourseWiseRoute
+  FacultyStudentsCourseWiseSaprRoute: typeof FacultyStudentsCourseWiseSaprRoute
+  FacultyStudentsEligibleRoute: typeof FacultyStudentsEligibleRoute
+  FacultyStudentsRegisteredRoute: typeof FacultyStudentsRegisteredRoute
+  FacultyStudentsRegistrationListRoute: typeof FacultyStudentsRegistrationListRoute
+  FacultyWorkloadDetentionsAddRoute: typeof FacultyWorkloadDetentionsAddRoute
+  FacultyWorkloadDetentionsFinalRoute: typeof FacultyWorkloadDetentionsFinalRoute
+  FacultyWorkloadDetentionsNilAddRoute: typeof FacultyWorkloadDetentionsNilAddRoute
+  FacultyWorkloadDetentionsNilListRoute: typeof FacultyWorkloadDetentionsNilListRoute
+  FacultyWorkloadDetentionsProvisionalRoute: typeof FacultyWorkloadDetentionsProvisionalRoute
+  FacultyWorkloadMarksEntryFillRoute: typeof FacultyWorkloadMarksEntryFillRoute
+}
+
+const FacultyRouteChildren: FacultyRouteChildren = {
+  FacultyChangePasswordRoute: FacultyChangePasswordRoute,
+  FacultyDashboardRoute: FacultyDashboardRoute,
+  FacultyExamResultHistoryRoute: FacultyExamResultHistoryRoute,
+  FacultyProfileRoute: FacultyProfileRoute,
+  FacultyIndexRoute: FacultyIndexRoute,
+  FacultyAdmissionAdmitted202526Route: FacultyAdmissionAdmitted202526Route,
+  FacultyAdmissionAdmitted202627Route: FacultyAdmissionAdmitted202627Route,
+  FacultyAdmissionEligibleFyRoute: FacultyAdmissionEligibleFyRoute,
+  FacultyAdmissionEligibleSyRoute: FacultyAdmissionEligibleSyRoute,
+  FacultyAdmissionEligibleTyRoute: FacultyAdmissionEligibleTyRoute,
+  FacultyLacTheoryExamRoute: FacultyLacTheoryExamRoute,
+  FacultyOnlineExamQuestionBankRoute: FacultyOnlineExamQuestionBankRoute,
+  FacultyResultAnalysisBitwiseMarksRoute:
+    FacultyResultAnalysisBitwiseMarksRoute,
+  FacultyResultAnalysisSummer2025Route: FacultyResultAnalysisSummer2025Route,
+  FacultyResultAnalysisSummer2026Route: FacultyResultAnalysisSummer2026Route,
+  FacultyResultAnalysisWinter2025Route: FacultyResultAnalysisWinter2025Route,
+  FacultyStudentsCourseWiseRoute: FacultyStudentsCourseWiseRoute,
+  FacultyStudentsCourseWiseSaprRoute: FacultyStudentsCourseWiseSaprRoute,
+  FacultyStudentsEligibleRoute: FacultyStudentsEligibleRoute,
+  FacultyStudentsRegisteredRoute: FacultyStudentsRegisteredRoute,
+  FacultyStudentsRegistrationListRoute: FacultyStudentsRegistrationListRoute,
+  FacultyWorkloadDetentionsAddRoute: FacultyWorkloadDetentionsAddRoute,
+  FacultyWorkloadDetentionsFinalRoute: FacultyWorkloadDetentionsFinalRoute,
+  FacultyWorkloadDetentionsNilAddRoute: FacultyWorkloadDetentionsNilAddRoute,
+  FacultyWorkloadDetentionsNilListRoute: FacultyWorkloadDetentionsNilListRoute,
+  FacultyWorkloadDetentionsProvisionalRoute:
+    FacultyWorkloadDetentionsProvisionalRoute,
+  FacultyWorkloadMarksEntryFillRoute: FacultyWorkloadMarksEntryFillRoute,
+}
+
+const FacultyRouteWithChildren =
+  FacultyRoute._addFileChildren(FacultyRouteChildren)
 
 interface StudentRouteChildren {
   StudentAdmissionFeeRoute: typeof StudentAdmissionFeeRoute
@@ -613,6 +1230,7 @@ const StudentRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FacultyRoute: FacultyRouteWithChildren,
   LoginRoute: LoginRoute,
   StudentRoute: StudentRouteWithChildren,
 }

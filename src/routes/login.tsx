@@ -24,11 +24,11 @@ export const Route = createFileRoute("/login")({
 
 function LoginPage() {
   const { user } = useAuth();
-  // Faculty / administrative modules are delivered in a later slice; all
-  // authenticated users currently land on the student panel.
+  // Administrative / admin modules are delivered in a later slice.
   if (user) {
-    return <Navigate to="/student/dashboard" />;
+    return <Navigate to={user.baseProfile === "faculty" ? "/faculty/dashboard" : "/student/dashboard"} />;
   }
+
 
 
   return (
