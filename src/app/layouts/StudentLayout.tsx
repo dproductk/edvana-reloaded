@@ -31,7 +31,12 @@ export function StudentLayout({ children }: StudentLayoutProps) {
       <AppHeader onToggleSidebar={() => setSidebarOpen((v) => !v)} />
       <div className="flex flex-1">
         {profile ? (
-          <AppSidebar sections={STUDENT_NAV} profile={profile} open={sidebarOpen} />
+          <AppSidebar
+            sections={STUDENT_NAV}
+            header={<StudentProfileCard profile={profile} />}
+            open={sidebarOpen}
+          />
+
         ) : (
           <aside className="w-72 shrink-0 border-r border-border bg-sidebar p-4">
             <Skeleton className="mx-auto h-24 w-24 rounded-full" />

@@ -1,18 +1,17 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { ChevronRight } from "lucide-react";
 import type { NavSection, NavGroup } from "@/constants/student-nav";
 import { cn } from "@/lib/utils";
-import { StudentProfileCard } from "@/components/layout/StudentProfileCard";
-import type { StudentProfile } from "@/types/student";
 
 interface AppSidebarProps {
   sections: NavSection[];
-  profile: StudentProfile;
+  /** Profile card rendered above the navigation. */
+  header: ReactNode;
   open: boolean;
 }
 
-export function AppSidebar({ sections, profile, open }: AppSidebarProps) {
+export function AppSidebar({ sections, header, open }: AppSidebarProps) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
@@ -24,7 +23,8 @@ export function AppSidebar({ sections, profile, open }: AppSidebarProps) {
       aria-hidden={!open}
     >
       <div className={cn("min-w-72 pb-6", !open && "pointer-events-none opacity-0")}>
-        <StudentProfileCard profile={profile} />
+        {header}
+
 
         <nav className="mt-4 px-2">
           {sections.map((section, i) => (
