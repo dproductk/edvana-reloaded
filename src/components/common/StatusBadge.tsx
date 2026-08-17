@@ -10,23 +10,73 @@ const TONE_CLASS: Record<Tone, string> = {
   neutral: "bg-muted text-muted-foreground border-border",
 };
 
-export function StatusBadge({ label, tone = "neutral" }: { label: string; tone?: Tone }) {
+export function StatusBadge({
+  status,
+  label,
+  tone,
+}: {
+  status?: string;
+  label?: string;
+  tone?: Tone;
+}) {
+  const displayLabel = label ?? status ?? "";
+  const displayTone = tone ?? (status ? toneForStatus(status) : "neutral");
   return (
     <span
       className={cn(
         "inline-flex items-center rounded-full border px-2.5 py-0.5 text-[11px] font-semibold",
-        TONE_CLASS[tone],
+        TONE_CLASS[displayTone],
       )}
     >
-      {label}
+      {displayLabel}
     </span>
   );
 }
 
 export function toneForStatus(status: string): Tone {
   const s = status.toLowerCase();
-  if (["paid", "success", "pass", "completed", "confirmed"].includes(s)) return "success";
-  if (["pending", "upcoming", "live"].includes(s)) return "warning";
-  if (["failed", "fail", "rejected"].includes(s)) return "danger";
+  if (
+    [
+      "active",
+      "paid",
+      "successful",
+      "success",
+      "pass",
+      "completed",
+      "confirmed",
+      "finalized",
+      "approved",
+      "published",
+      "eligible",
+    ].includes(s)
+  )
+    return "success";
+  if (
+    [
+      "pending",
+      "draft",
+      "upcoming",
+      "live",
+      "in progress",
+      "verification pending",
+      "under review",
+      "fee pending",
+    ].includes(s)
+  )
+    return "warning";
+  if (
+    [
+      "inactive",
+      "failed",
+      "fail",
+      "rejected",
+      "cancelled",
+      "closed",
+      "not eligible",
+      "error",
+    ].includes(s)
+  )
+    return "danger";
   return "neutral";
 }
+

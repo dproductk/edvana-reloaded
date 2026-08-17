@@ -26,6 +26,9 @@ function LoginPage() {
   const { user } = useAuth();
   // Administrative / admin modules are delivered in a later slice.
   if (user) {
+    if (user.baseProfile === "admin" || user.baseProfile === "administrative") {
+      return <Navigate to="/admin/dashboard" />;
+    }
     return <Navigate to={user.baseProfile === "faculty" ? "/faculty/dashboard" : "/student/dashboard"} />;
   }
 

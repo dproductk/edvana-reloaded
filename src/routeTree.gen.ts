@@ -9,70 +9,137 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as StudentRouteImport } from './routes/student'
-import { Route as LoginRouteImport } from './routes/login'
-import { Route as FacultyRouteImport } from './routes/faculty'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as StudentIndexRouteImport } from './routes/student.index'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as FacultyRouteImport } from './routes/faculty'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as StudentRouteImport } from './routes/student'
+import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
 import { Route as FacultyIndexRouteImport } from './routes/faculty.index'
-import { Route as StudentResultRouteImport } from './routes/student.result'
-import { Route as StudentProfileRouteImport } from './routes/student.profile'
-import { Route as StudentPaymentHistoryRouteImport } from './routes/student.payment-history'
-import { Route as StudentOnlineExamRouteImport } from './routes/student.online-exam'
-import { Route as StudentFacilityFeedbackRouteImport } from './routes/student.facility-feedback'
-import { Route as StudentDuplicateIdRouteImport } from './routes/student.duplicate-id'
-import { Route as StudentDashboardRouteImport } from './routes/student.dashboard'
-import { Route as StudentChangePasswordRouteImport } from './routes/student.change-password'
-import { Route as StudentAdmissionFeeRouteImport } from './routes/student.admission-fee'
-import { Route as FacultyProfileRouteImport } from './routes/faculty.profile'
-import { Route as FacultyExamResultHistoryRouteImport } from './routes/faculty.exam-result-history'
-import { Route as FacultyDashboardRouteImport } from './routes/faculty.dashboard'
 import { Route as FacultyChangePasswordRouteImport } from './routes/faculty.change-password'
-import { Route as StudentYearWiseResultSyRouteImport } from './routes/student.year-wise-result.sy'
-import { Route as StudentYearWiseResultFyRouteImport } from './routes/student.year-wise-result.fy'
-import { Route as StudentPhotocopyReceiptRouteImport } from './routes/student.photocopy.receipt'
-import { Route as StudentPhotocopyPrintRouteImport } from './routes/student.photocopy.print'
-import { Route as StudentPhotocopyPaymentRouteImport } from './routes/student.photocopy.payment'
-import { Route as StudentPhotocopyFillRouteImport } from './routes/student.photocopy.fill'
-import { Route as StudentPhotocopyConfirmRouteImport } from './routes/student.photocopy.confirm'
-import { Route as StudentFeedbackMidtermRouteImport } from './routes/student.feedback.midterm'
-import { Route as StudentFeedbackEndtermRouteImport } from './routes/student.feedback.endterm'
-import { Route as StudentExamRegistrationReceiptRouteImport } from './routes/student.exam-registration.receipt'
-import { Route as StudentExamRegistrationPrintRouteImport } from './routes/student.exam-registration.print'
-import { Route as StudentExamRegistrationPaymentRouteImport } from './routes/student.exam-registration.payment'
-import { Route as StudentExamRegistrationFillRouteImport } from './routes/student.exam-registration.fill'
-import { Route as StudentExamRegistrationConfirmRouteImport } from './routes/student.exam-registration.confirm'
-import { Route as FacultyStudentsRegistrationListRouteImport } from './routes/faculty.students.registration-list'
-import { Route as FacultyStudentsRegisteredRouteImport } from './routes/faculty.students.registered'
-import { Route as FacultyStudentsEligibleRouteImport } from './routes/faculty.students.eligible'
-import { Route as FacultyStudentsCourseWiseSaprRouteImport } from './routes/faculty.students.course-wise-sapr'
-import { Route as FacultyStudentsCourseWiseRouteImport } from './routes/faculty.students.course-wise'
-import { Route as FacultyResultAnalysisWinter2025RouteImport } from './routes/faculty.result-analysis.winter-2025'
-import { Route as FacultyResultAnalysisSummer2026RouteImport } from './routes/faculty.result-analysis.summer-2026'
-import { Route as FacultyResultAnalysisSummer2025RouteImport } from './routes/faculty.result-analysis.summer-2025'
-import { Route as FacultyResultAnalysisBitwiseMarksRouteImport } from './routes/faculty.result-analysis.bitwise-marks'
-import { Route as FacultyOnlineExamQuestionBankRouteImport } from './routes/faculty.online-exam.question-bank'
-import { Route as FacultyLacTheoryExamRouteImport } from './routes/faculty.lac.theory-exam'
-import { Route as FacultyAdmissionEligibleTyRouteImport } from './routes/faculty.admission.eligible-ty'
-import { Route as FacultyAdmissionEligibleSyRouteImport } from './routes/faculty.admission.eligible-sy'
-import { Route as FacultyAdmissionEligibleFyRouteImport } from './routes/faculty.admission.eligible-fy'
-import { Route as FacultyAdmissionAdmitted202627RouteImport } from './routes/faculty.admission.admitted-2026-27'
+import { Route as FacultyDashboardRouteImport } from './routes/faculty.dashboard'
+import { Route as FacultyExamResultHistoryRouteImport } from './routes/faculty.exam-result-history'
+import { Route as FacultyProfileRouteImport } from './routes/faculty.profile'
+import { Route as StudentIndexRouteImport } from './routes/student.index'
+import { Route as StudentAdmissionFeeRouteImport } from './routes/student.admission-fee'
+import { Route as StudentChangePasswordRouteImport } from './routes/student.change-password'
+import { Route as StudentDashboardRouteImport } from './routes/student.dashboard'
+import { Route as StudentDuplicateIdRouteImport } from './routes/student.duplicate-id'
+import { Route as StudentFacilityFeedbackRouteImport } from './routes/student.facility-feedback'
+import { Route as StudentOnlineExamRouteImport } from './routes/student.online-exam'
+import { Route as StudentPaymentHistoryRouteImport } from './routes/student.payment-history'
+import { Route as StudentProfileRouteImport } from './routes/student.profile'
+import { Route as StudentResultRouteImport } from './routes/student.result'
+import { Route as AdminAcademicBatchesRouteImport } from './routes/admin.academic.batches'
+import { Route as AdminAcademicBranchesRouteImport } from './routes/admin.academic.branches'
+import { Route as AdminAcademicCourseMappingsRouteImport } from './routes/admin.academic.course-mappings'
+import { Route as AdminAcademicCourseTypesRouteImport } from './routes/admin.academic.course-types'
+import { Route as AdminAcademicCoursesRouteImport } from './routes/admin.academic.courses'
+import { Route as AdminAcademicDivisionsRouteImport } from './routes/admin.academic.divisions'
+import { Route as AdminAcademicProgramsRouteImport } from './routes/admin.academic.programs'
+import { Route as AdminAcademicSchemesRouteImport } from './routes/admin.academic.schemes'
+import { Route as AdminAcademicSemestersRouteImport } from './routes/admin.academic.semesters'
+import { Route as AdminAcademicYearsRouteImport } from './routes/admin.academic.years'
+import { Route as AdminAdmissionsAdmittedRouteImport } from './routes/admin.admissions.admitted'
+import { Route as AdminAdmissionsEligibilityRouteImport } from './routes/admin.admissions.eligibility'
+import { Route as AdminAdmissionsEligibleRouteImport } from './routes/admin.admissions.eligible'
+import { Route as AdminAdmissionsFeesRouteImport } from './routes/admin.admissions.fees'
+import { Route as AdminAdmissionsSettingsRouteImport } from './routes/admin.admissions.settings'
+import { Route as AdminAdmissionsSummaryRouteImport } from './routes/admin.admissions.summary'
+import { Route as AdminAnalyticsResultsRouteImport } from './routes/admin.analytics.results'
+import { Route as AdminDataImportRouteImport } from './routes/admin.data.import'
+import { Route as AdminDataMigrationRouteImport } from './routes/admin.data.migration'
+import { Route as AdminDataReconciliationRouteImport } from './routes/admin.data.reconciliation'
+import { Route as AdminExamsCourseRegistrationRouteImport } from './routes/admin.exams.course-registration'
+import { Route as AdminExamsCoursesRouteImport } from './routes/admin.exams.courses'
+import { Route as AdminExamsEligibilityRouteImport } from './routes/admin.exams.eligibility'
+import { Route as AdminExamsFinalRegistrationRouteImport } from './routes/admin.exams.final-registration'
+import { Route as AdminExamsRRouteImport } from './routes/admin.exams.r'
+import { Route as AdminExamsRRrRouteImport } from './routes/admin.exams.r-rr'
+import { Route as AdminExamsRegistrationReviewRouteImport } from './routes/admin.exams.registration-review'
+import { Route as AdminExamsRrRouteImport } from './routes/admin.exams.rr'
+import { Route as AdminExamsSessionsRouteImport } from './routes/admin.exams.sessions'
+import { Route as AdminExamsSettingsRouteImport } from './routes/admin.exams.settings'
+import { Route as AdminExamsTimetableRouteImport } from './routes/admin.exams.timetable'
+import { Route as AdminExamsTimetableSettingsRouteImport } from './routes/admin.exams.timetable-settings'
+import { Route as AdminFeesHeadsRouteImport } from './routes/admin.fees.heads'
+import { Route as AdminFeesPaymentsRouteImport } from './routes/admin.fees.payments'
+import { Route as AdminFeesReconciliationRouteImport } from './routes/admin.fees.reconciliation'
+import { Route as AdminFeesStructuresRouteImport } from './routes/admin.fees.structures'
+import { Route as AdminMasterFacultyRouteImport } from './routes/admin.master.faculty'
+import { Route as AdminMasterStudentsRouteImport } from './routes/admin.master.students'
+import { Route as AdminOperationsDetentionRouteImport } from './routes/admin.operations.detention'
+import { Route as AdminOperationsInternalAssessmentRouteImport } from './routes/admin.operations.internal-assessment'
+import { Route as AdminOperationsMarksMonitoringRouteImport } from './routes/admin.operations.marks-monitoring'
+import { Route as AdminReportsIndexRouteImport } from './routes/admin.reports.index'
+import { Route as AdminReportsAcademicRouteImport } from './routes/admin.reports.academic'
+import { Route as AdminReportsAdmissionRouteImport } from './routes/admin.reports.admission'
+import { Route as AdminReportsExaminationRouteImport } from './routes/admin.reports.examination'
+import { Route as AdminReportsFeesRouteImport } from './routes/admin.reports.fees'
+import { Route as AdminReportsResultsRouteImport } from './routes/admin.reports.results'
+import { Route as AdminResultsBacklogsRouteImport } from './routes/admin.results.backlogs'
+import { Route as AdminResultsFinalizationRouteImport } from './routes/admin.results.finalization'
+import { Route as AdminResultsImportRouteImport } from './routes/admin.results.import'
+import { Route as AdminResultsMarksheetsRouteImport } from './routes/admin.results.marksheets'
+import { Route as AdminResultsProcessingRouteImport } from './routes/admin.results.processing'
+import { Route as AdminResultsSettingsRouteImport } from './routes/admin.results.settings'
+import { Route as AdminResultsVerificationRouteImport } from './routes/admin.results.verification'
+import { Route as AdminSettingsIndexRouteImport } from './routes/admin.settings.index'
+import { Route as AdminSettingsAdmissionRouteImport } from './routes/admin.settings.admission'
+import { Route as AdminSettingsExaminationRouteImport } from './routes/admin.settings.examination'
+import { Route as AdminSettingsRegistrationRouteImport } from './routes/admin.settings.registration'
+import { Route as AdminSettingsSemesterRouteImport } from './routes/admin.settings.semester'
+import { Route as AdminUsersIndexRouteImport } from './routes/admin.users.index'
+import { Route as AdminUsersAssignmentsRouteImport } from './routes/admin.users.assignments'
+import { Route as AdminUsersPermissionsRouteImport } from './routes/admin.users.permissions'
+import { Route as AdminUsersRolesRouteImport } from './routes/admin.users.roles'
 import { Route as FacultyAdmissionAdmitted202526RouteImport } from './routes/faculty.admission.admitted-2025-26'
-import { Route as FacultyWorkloadMarksEntryFillRouteImport } from './routes/faculty.workload.marks-entry.fill'
-import { Route as FacultyWorkloadDetentionsProvisionalRouteImport } from './routes/faculty.workload.detentions.provisional'
-import { Route as FacultyWorkloadDetentionsNilListRouteImport } from './routes/faculty.workload.detentions.nil-list'
-import { Route as FacultyWorkloadDetentionsNilAddRouteImport } from './routes/faculty.workload.detentions.nil-add'
-import { Route as FacultyWorkloadDetentionsFinalRouteImport } from './routes/faculty.workload.detentions.final'
+import { Route as FacultyAdmissionAdmitted202627RouteImport } from './routes/faculty.admission.admitted-2026-27'
+import { Route as FacultyAdmissionEligibleFyRouteImport } from './routes/faculty.admission.eligible-fy'
+import { Route as FacultyAdmissionEligibleSyRouteImport } from './routes/faculty.admission.eligible-sy'
+import { Route as FacultyAdmissionEligibleTyRouteImport } from './routes/faculty.admission.eligible-ty'
+import { Route as FacultyLacTheoryExamRouteImport } from './routes/faculty.lac.theory-exam'
+import { Route as FacultyOnlineExamQuestionBankRouteImport } from './routes/faculty.online-exam.question-bank'
+import { Route as FacultyResultAnalysisBitwiseMarksRouteImport } from './routes/faculty.result-analysis.bitwise-marks'
+import { Route as FacultyResultAnalysisSummer2025RouteImport } from './routes/faculty.result-analysis.summer-2025'
+import { Route as FacultyResultAnalysisSummer2026RouteImport } from './routes/faculty.result-analysis.summer-2026'
+import { Route as FacultyResultAnalysisWinter2025RouteImport } from './routes/faculty.result-analysis.winter-2025'
+import { Route as FacultyStudentsCourseWiseRouteImport } from './routes/faculty.students.course-wise'
+import { Route as FacultyStudentsCourseWiseSaprRouteImport } from './routes/faculty.students.course-wise-sapr'
+import { Route as FacultyStudentsEligibleRouteImport } from './routes/faculty.students.eligible'
+import { Route as FacultyStudentsRegisteredRouteImport } from './routes/faculty.students.registered'
+import { Route as FacultyStudentsRegistrationListRouteImport } from './routes/faculty.students.registration-list'
+import { Route as StudentExamRegistrationConfirmRouteImport } from './routes/student.exam-registration.confirm'
+import { Route as StudentExamRegistrationFillRouteImport } from './routes/student.exam-registration.fill'
+import { Route as StudentExamRegistrationPaymentRouteImport } from './routes/student.exam-registration.payment'
+import { Route as StudentExamRegistrationPrintRouteImport } from './routes/student.exam-registration.print'
+import { Route as StudentExamRegistrationReceiptRouteImport } from './routes/student.exam-registration.receipt'
+import { Route as StudentFeedbackEndtermRouteImport } from './routes/student.feedback.endterm'
+import { Route as StudentFeedbackMidtermRouteImport } from './routes/student.feedback.midterm'
+import { Route as StudentPhotocopyConfirmRouteImport } from './routes/student.photocopy.confirm'
+import { Route as StudentPhotocopyFillRouteImport } from './routes/student.photocopy.fill'
+import { Route as StudentPhotocopyPaymentRouteImport } from './routes/student.photocopy.payment'
+import { Route as StudentPhotocopyPrintRouteImport } from './routes/student.photocopy.print'
+import { Route as StudentPhotocopyReceiptRouteImport } from './routes/student.photocopy.receipt'
+import { Route as StudentYearWiseResultFyRouteImport } from './routes/student.year-wise-result.fy'
+import { Route as StudentYearWiseResultSyRouteImport } from './routes/student.year-wise-result.sy'
+import { Route as AdminMasterFacultyIdRouteImport } from './routes/admin.master.faculty.$id'
+import { Route as AdminMasterStudentsIdRouteImport } from './routes/admin.master.students.$id'
 import { Route as FacultyWorkloadDetentionsAddRouteImport } from './routes/faculty.workload.detentions.add'
+import { Route as FacultyWorkloadDetentionsFinalRouteImport } from './routes/faculty.workload.detentions.final'
+import { Route as FacultyWorkloadDetentionsNilAddRouteImport } from './routes/faculty.workload.detentions.nil-add'
+import { Route as FacultyWorkloadDetentionsNilListRouteImport } from './routes/faculty.workload.detentions.nil-list'
+import { Route as FacultyWorkloadDetentionsProvisionalRouteImport } from './routes/faculty.workload.detentions.provisional'
+import { Route as FacultyWorkloadMarksEntryFillRouteImport } from './routes/faculty.workload.marks-entry.fill'
 
-const StudentRoute = StudentRouteImport.update({
-  id: '/student',
-  path: '/student',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/login',
-  path: '/login',
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FacultyRoute = FacultyRouteImport.update({
@@ -80,69 +147,34 @@ const FacultyRoute = FacultyRouteImport.update({
   path: '/faculty',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StudentIndexRoute = StudentIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => StudentRoute,
+const StudentRoute = StudentRouteImport.update({
+  id: '/student',
+  path: '/student',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AdminRoute,
 } as any)
 const FacultyIndexRoute = FacultyIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => FacultyRoute,
 } as any)
-const StudentResultRoute = StudentResultRouteImport.update({
-  id: '/result',
-  path: '/result',
-  getParentRoute: () => StudentRoute,
-} as any)
-const StudentProfileRoute = StudentProfileRouteImport.update({
-  id: '/profile',
-  path: '/profile',
-  getParentRoute: () => StudentRoute,
-} as any)
-const StudentPaymentHistoryRoute = StudentPaymentHistoryRouteImport.update({
-  id: '/payment-history',
-  path: '/payment-history',
-  getParentRoute: () => StudentRoute,
-} as any)
-const StudentOnlineExamRoute = StudentOnlineExamRouteImport.update({
-  id: '/online-exam',
-  path: '/online-exam',
-  getParentRoute: () => StudentRoute,
-} as any)
-const StudentFacilityFeedbackRoute = StudentFacilityFeedbackRouteImport.update({
-  id: '/facility-feedback',
-  path: '/facility-feedback',
-  getParentRoute: () => StudentRoute,
-} as any)
-const StudentDuplicateIdRoute = StudentDuplicateIdRouteImport.update({
-  id: '/duplicate-id',
-  path: '/duplicate-id',
-  getParentRoute: () => StudentRoute,
-} as any)
-const StudentDashboardRoute = StudentDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => StudentRoute,
-} as any)
-const StudentChangePasswordRoute = StudentChangePasswordRouteImport.update({
+const FacultyChangePasswordRoute = FacultyChangePasswordRouteImport.update({
   id: '/change-password',
   path: '/change-password',
-  getParentRoute: () => StudentRoute,
+  getParentRoute: () => FacultyRoute,
 } as any)
-const StudentAdmissionFeeRoute = StudentAdmissionFeeRouteImport.update({
-  id: '/admission-fee',
-  path: '/admission-fee',
-  getParentRoute: () => StudentRoute,
-} as any)
-const FacultyProfileRoute = FacultyProfileRouteImport.update({
-  id: '/profile',
-  path: '/profile',
+const FacultyDashboardRoute = FacultyDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
   getParentRoute: () => FacultyRoute,
 } as any)
 const FacultyExamResultHistoryRoute =
@@ -151,171 +183,394 @@ const FacultyExamResultHistoryRoute =
     path: '/exam-result-history',
     getParentRoute: () => FacultyRoute,
   } as any)
-const FacultyDashboardRoute = FacultyDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
+const FacultyProfileRoute = FacultyProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
   getParentRoute: () => FacultyRoute,
 } as any)
-const FacultyChangePasswordRoute = FacultyChangePasswordRouteImport.update({
+const StudentIndexRoute = StudentIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentAdmissionFeeRoute = StudentAdmissionFeeRouteImport.update({
+  id: '/admission-fee',
+  path: '/admission-fee',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentChangePasswordRoute = StudentChangePasswordRouteImport.update({
   id: '/change-password',
   path: '/change-password',
-  getParentRoute: () => FacultyRoute,
-} as any)
-const StudentYearWiseResultSyRoute = StudentYearWiseResultSyRouteImport.update({
-  id: '/year-wise-result/sy',
-  path: '/year-wise-result/sy',
   getParentRoute: () => StudentRoute,
 } as any)
-const StudentYearWiseResultFyRoute = StudentYearWiseResultFyRouteImport.update({
-  id: '/year-wise-result/fy',
-  path: '/year-wise-result/fy',
+const StudentDashboardRoute = StudentDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
   getParentRoute: () => StudentRoute,
 } as any)
-const StudentPhotocopyReceiptRoute = StudentPhotocopyReceiptRouteImport.update({
-  id: '/photocopy/receipt',
-  path: '/photocopy/receipt',
+const StudentDuplicateIdRoute = StudentDuplicateIdRouteImport.update({
+  id: '/duplicate-id',
+  path: '/duplicate-id',
   getParentRoute: () => StudentRoute,
 } as any)
-const StudentPhotocopyPrintRoute = StudentPhotocopyPrintRouteImport.update({
-  id: '/photocopy/print',
-  path: '/photocopy/print',
+const StudentFacilityFeedbackRoute = StudentFacilityFeedbackRouteImport.update({
+  id: '/facility-feedback',
+  path: '/facility-feedback',
   getParentRoute: () => StudentRoute,
 } as any)
-const StudentPhotocopyPaymentRoute = StudentPhotocopyPaymentRouteImport.update({
-  id: '/photocopy/payment',
-  path: '/photocopy/payment',
+const StudentOnlineExamRoute = StudentOnlineExamRouteImport.update({
+  id: '/online-exam',
+  path: '/online-exam',
   getParentRoute: () => StudentRoute,
 } as any)
-const StudentPhotocopyFillRoute = StudentPhotocopyFillRouteImport.update({
-  id: '/photocopy/fill',
-  path: '/photocopy/fill',
+const StudentPaymentHistoryRoute = StudentPaymentHistoryRouteImport.update({
+  id: '/payment-history',
+  path: '/payment-history',
   getParentRoute: () => StudentRoute,
 } as any)
-const StudentPhotocopyConfirmRoute = StudentPhotocopyConfirmRouteImport.update({
-  id: '/photocopy/confirm',
-  path: '/photocopy/confirm',
+const StudentProfileRoute = StudentProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
   getParentRoute: () => StudentRoute,
 } as any)
-const StudentFeedbackMidtermRoute = StudentFeedbackMidtermRouteImport.update({
-  id: '/feedback/midterm',
-  path: '/feedback/midterm',
+const StudentResultRoute = StudentResultRouteImport.update({
+  id: '/result',
+  path: '/result',
   getParentRoute: () => StudentRoute,
 } as any)
-const StudentFeedbackEndtermRoute = StudentFeedbackEndtermRouteImport.update({
-  id: '/feedback/endterm',
-  path: '/feedback/endterm',
-  getParentRoute: () => StudentRoute,
+const AdminAcademicBatchesRoute = AdminAcademicBatchesRouteImport.update({
+  id: '/academic/batches',
+  path: '/academic/batches',
+  getParentRoute: () => AdminRoute,
 } as any)
-const StudentExamRegistrationReceiptRoute =
-  StudentExamRegistrationReceiptRouteImport.update({
-    id: '/exam-registration/receipt',
-    path: '/exam-registration/receipt',
-    getParentRoute: () => StudentRoute,
-  } as any)
-const StudentExamRegistrationPrintRoute =
-  StudentExamRegistrationPrintRouteImport.update({
-    id: '/exam-registration/print',
-    path: '/exam-registration/print',
-    getParentRoute: () => StudentRoute,
-  } as any)
-const StudentExamRegistrationPaymentRoute =
-  StudentExamRegistrationPaymentRouteImport.update({
-    id: '/exam-registration/payment',
-    path: '/exam-registration/payment',
-    getParentRoute: () => StudentRoute,
-  } as any)
-const StudentExamRegistrationFillRoute =
-  StudentExamRegistrationFillRouteImport.update({
-    id: '/exam-registration/fill',
-    path: '/exam-registration/fill',
-    getParentRoute: () => StudentRoute,
-  } as any)
-const StudentExamRegistrationConfirmRoute =
-  StudentExamRegistrationConfirmRouteImport.update({
-    id: '/exam-registration/confirm',
-    path: '/exam-registration/confirm',
-    getParentRoute: () => StudentRoute,
-  } as any)
-const FacultyStudentsRegistrationListRoute =
-  FacultyStudentsRegistrationListRouteImport.update({
-    id: '/students/registration-list',
-    path: '/students/registration-list',
-    getParentRoute: () => FacultyRoute,
-  } as any)
-const FacultyStudentsRegisteredRoute =
-  FacultyStudentsRegisteredRouteImport.update({
-    id: '/students/registered',
-    path: '/students/registered',
-    getParentRoute: () => FacultyRoute,
-  } as any)
-const FacultyStudentsEligibleRoute = FacultyStudentsEligibleRouteImport.update({
-  id: '/students/eligible',
-  path: '/students/eligible',
-  getParentRoute: () => FacultyRoute,
+const AdminAcademicBranchesRoute = AdminAcademicBranchesRouteImport.update({
+  id: '/academic/branches',
+  path: '/academic/branches',
+  getParentRoute: () => AdminRoute,
 } as any)
-const FacultyStudentsCourseWiseSaprRoute =
-  FacultyStudentsCourseWiseSaprRouteImport.update({
-    id: '/students/course-wise-sapr',
-    path: '/students/course-wise-sapr',
-    getParentRoute: () => FacultyRoute,
+const AdminAcademicCourseMappingsRoute =
+  AdminAcademicCourseMappingsRouteImport.update({
+    id: '/academic/course-mappings',
+    path: '/academic/course-mappings',
+    getParentRoute: () => AdminRoute,
   } as any)
-const FacultyStudentsCourseWiseRoute =
-  FacultyStudentsCourseWiseRouteImport.update({
-    id: '/students/course-wise',
-    path: '/students/course-wise',
-    getParentRoute: () => FacultyRoute,
+const AdminAcademicCourseTypesRoute =
+  AdminAcademicCourseTypesRouteImport.update({
+    id: '/academic/course-types',
+    path: '/academic/course-types',
+    getParentRoute: () => AdminRoute,
   } as any)
-const FacultyResultAnalysisWinter2025Route =
-  FacultyResultAnalysisWinter2025RouteImport.update({
-    id: '/result-analysis/winter-2025',
-    path: '/result-analysis/winter-2025',
-    getParentRoute: () => FacultyRoute,
-  } as any)
-const FacultyResultAnalysisSummer2026Route =
-  FacultyResultAnalysisSummer2026RouteImport.update({
-    id: '/result-analysis/summer-2026',
-    path: '/result-analysis/summer-2026',
-    getParentRoute: () => FacultyRoute,
-  } as any)
-const FacultyResultAnalysisSummer2025Route =
-  FacultyResultAnalysisSummer2025RouteImport.update({
-    id: '/result-analysis/summer-2025',
-    path: '/result-analysis/summer-2025',
-    getParentRoute: () => FacultyRoute,
-  } as any)
-const FacultyResultAnalysisBitwiseMarksRoute =
-  FacultyResultAnalysisBitwiseMarksRouteImport.update({
-    id: '/result-analysis/bitwise-marks',
-    path: '/result-analysis/bitwise-marks',
-    getParentRoute: () => FacultyRoute,
-  } as any)
-const FacultyOnlineExamQuestionBankRoute =
-  FacultyOnlineExamQuestionBankRouteImport.update({
-    id: '/online-exam/question-bank',
-    path: '/online-exam/question-bank',
-    getParentRoute: () => FacultyRoute,
-  } as any)
-const FacultyLacTheoryExamRoute = FacultyLacTheoryExamRouteImport.update({
-  id: '/lac/theory-exam',
-  path: '/lac/theory-exam',
-  getParentRoute: () => FacultyRoute,
+const AdminAcademicCoursesRoute = AdminAcademicCoursesRouteImport.update({
+  id: '/academic/courses',
+  path: '/academic/courses',
+  getParentRoute: () => AdminRoute,
 } as any)
-const FacultyAdmissionEligibleTyRoute =
-  FacultyAdmissionEligibleTyRouteImport.update({
-    id: '/admission/eligible-ty',
-    path: '/admission/eligible-ty',
-    getParentRoute: () => FacultyRoute,
+const AdminAcademicDivisionsRoute = AdminAcademicDivisionsRouteImport.update({
+  id: '/academic/divisions',
+  path: '/academic/divisions',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAcademicProgramsRoute = AdminAcademicProgramsRouteImport.update({
+  id: '/academic/programs',
+  path: '/academic/programs',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAcademicSchemesRoute = AdminAcademicSchemesRouteImport.update({
+  id: '/academic/schemes',
+  path: '/academic/schemes',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAcademicSemestersRoute = AdminAcademicSemestersRouteImport.update({
+  id: '/academic/semesters',
+  path: '/academic/semesters',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAcademicYearsRoute = AdminAcademicYearsRouteImport.update({
+  id: '/academic/years',
+  path: '/academic/years',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAdmissionsAdmittedRoute = AdminAdmissionsAdmittedRouteImport.update({
+  id: '/admissions/admitted',
+  path: '/admissions/admitted',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAdmissionsEligibilityRoute =
+  AdminAdmissionsEligibilityRouteImport.update({
+    id: '/admissions/eligibility',
+    path: '/admissions/eligibility',
+    getParentRoute: () => AdminRoute,
   } as any)
-const FacultyAdmissionEligibleSyRoute =
-  FacultyAdmissionEligibleSyRouteImport.update({
-    id: '/admission/eligible-sy',
-    path: '/admission/eligible-sy',
-    getParentRoute: () => FacultyRoute,
+const AdminAdmissionsEligibleRoute = AdminAdmissionsEligibleRouteImport.update({
+  id: '/admissions/eligible',
+  path: '/admissions/eligible',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAdmissionsFeesRoute = AdminAdmissionsFeesRouteImport.update({
+  id: '/admissions/fees',
+  path: '/admissions/fees',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAdmissionsSettingsRoute = AdminAdmissionsSettingsRouteImport.update({
+  id: '/admissions/settings',
+  path: '/admissions/settings',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAdmissionsSummaryRoute = AdminAdmissionsSummaryRouteImport.update({
+  id: '/admissions/summary',
+  path: '/admissions/summary',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAnalyticsResultsRoute = AdminAnalyticsResultsRouteImport.update({
+  id: '/analytics/results',
+  path: '/analytics/results',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminDataImportRoute = AdminDataImportRouteImport.update({
+  id: '/data/import',
+  path: '/data/import',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminDataMigrationRoute = AdminDataMigrationRouteImport.update({
+  id: '/data/migration',
+  path: '/data/migration',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminDataReconciliationRoute = AdminDataReconciliationRouteImport.update({
+  id: '/data/reconciliation',
+  path: '/data/reconciliation',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminExamsCourseRegistrationRoute =
+  AdminExamsCourseRegistrationRouteImport.update({
+    id: '/exams/course-registration',
+    path: '/exams/course-registration',
+    getParentRoute: () => AdminRoute,
   } as any)
-const FacultyAdmissionEligibleFyRoute =
-  FacultyAdmissionEligibleFyRouteImport.update({
-    id: '/admission/eligible-fy',
-    path: '/admission/eligible-fy',
+const AdminExamsCoursesRoute = AdminExamsCoursesRouteImport.update({
+  id: '/exams/courses',
+  path: '/exams/courses',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminExamsEligibilityRoute = AdminExamsEligibilityRouteImport.update({
+  id: '/exams/eligibility',
+  path: '/exams/eligibility',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminExamsFinalRegistrationRoute =
+  AdminExamsFinalRegistrationRouteImport.update({
+    id: '/exams/final-registration',
+    path: '/exams/final-registration',
+    getParentRoute: () => AdminRoute,
+  } as any)
+const AdminExamsRRoute = AdminExamsRRouteImport.update({
+  id: '/exams/r',
+  path: '/exams/r',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminExamsRRrRoute = AdminExamsRRrRouteImport.update({
+  id: '/exams/r-rr',
+  path: '/exams/r-rr',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminExamsRegistrationReviewRoute =
+  AdminExamsRegistrationReviewRouteImport.update({
+    id: '/exams/registration-review',
+    path: '/exams/registration-review',
+    getParentRoute: () => AdminRoute,
+  } as any)
+const AdminExamsRrRoute = AdminExamsRrRouteImport.update({
+  id: '/exams/rr',
+  path: '/exams/rr',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminExamsSessionsRoute = AdminExamsSessionsRouteImport.update({
+  id: '/exams/sessions',
+  path: '/exams/sessions',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminExamsSettingsRoute = AdminExamsSettingsRouteImport.update({
+  id: '/exams/settings',
+  path: '/exams/settings',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminExamsTimetableRoute = AdminExamsTimetableRouteImport.update({
+  id: '/exams/timetable',
+  path: '/exams/timetable',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminExamsTimetableSettingsRoute =
+  AdminExamsTimetableSettingsRouteImport.update({
+    id: '/exams/timetable-settings',
+    path: '/exams/timetable-settings',
+    getParentRoute: () => AdminRoute,
+  } as any)
+const AdminFeesHeadsRoute = AdminFeesHeadsRouteImport.update({
+  id: '/fees/heads',
+  path: '/fees/heads',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminFeesPaymentsRoute = AdminFeesPaymentsRouteImport.update({
+  id: '/fees/payments',
+  path: '/fees/payments',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminFeesReconciliationRoute = AdminFeesReconciliationRouteImport.update({
+  id: '/fees/reconciliation',
+  path: '/fees/reconciliation',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminFeesStructuresRoute = AdminFeesStructuresRouteImport.update({
+  id: '/fees/structures',
+  path: '/fees/structures',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminMasterFacultyRoute = AdminMasterFacultyRouteImport.update({
+  id: '/master/faculty',
+  path: '/master/faculty',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminMasterStudentsRoute = AdminMasterStudentsRouteImport.update({
+  id: '/master/students',
+  path: '/master/students',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminOperationsDetentionRoute =
+  AdminOperationsDetentionRouteImport.update({
+    id: '/operations/detention',
+    path: '/operations/detention',
+    getParentRoute: () => AdminRoute,
+  } as any)
+const AdminOperationsInternalAssessmentRoute =
+  AdminOperationsInternalAssessmentRouteImport.update({
+    id: '/operations/internal-assessment',
+    path: '/operations/internal-assessment',
+    getParentRoute: () => AdminRoute,
+  } as any)
+const AdminOperationsMarksMonitoringRoute =
+  AdminOperationsMarksMonitoringRouteImport.update({
+    id: '/operations/marks-monitoring',
+    path: '/operations/marks-monitoring',
+    getParentRoute: () => AdminRoute,
+  } as any)
+const AdminReportsIndexRoute = AdminReportsIndexRouteImport.update({
+  id: '/reports/',
+  path: '/reports/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminReportsAcademicRoute = AdminReportsAcademicRouteImport.update({
+  id: '/reports/academic',
+  path: '/reports/academic',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminReportsAdmissionRoute = AdminReportsAdmissionRouteImport.update({
+  id: '/reports/admission',
+  path: '/reports/admission',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminReportsExaminationRoute = AdminReportsExaminationRouteImport.update({
+  id: '/reports/examination',
+  path: '/reports/examination',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminReportsFeesRoute = AdminReportsFeesRouteImport.update({
+  id: '/reports/fees',
+  path: '/reports/fees',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminReportsResultsRoute = AdminReportsResultsRouteImport.update({
+  id: '/reports/results',
+  path: '/reports/results',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminResultsBacklogsRoute = AdminResultsBacklogsRouteImport.update({
+  id: '/results/backlogs',
+  path: '/results/backlogs',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminResultsFinalizationRoute =
+  AdminResultsFinalizationRouteImport.update({
+    id: '/results/finalization',
+    path: '/results/finalization',
+    getParentRoute: () => AdminRoute,
+  } as any)
+const AdminResultsImportRoute = AdminResultsImportRouteImport.update({
+  id: '/results/import',
+  path: '/results/import',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminResultsMarksheetsRoute = AdminResultsMarksheetsRouteImport.update({
+  id: '/results/marksheets',
+  path: '/results/marksheets',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminResultsProcessingRoute = AdminResultsProcessingRouteImport.update({
+  id: '/results/processing',
+  path: '/results/processing',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminResultsSettingsRoute = AdminResultsSettingsRouteImport.update({
+  id: '/results/settings',
+  path: '/results/settings',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminResultsVerificationRoute =
+  AdminResultsVerificationRouteImport.update({
+    id: '/results/verification',
+    path: '/results/verification',
+    getParentRoute: () => AdminRoute,
+  } as any)
+const AdminSettingsIndexRoute = AdminSettingsIndexRouteImport.update({
+  id: '/settings/',
+  path: '/settings/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsAdmissionRoute = AdminSettingsAdmissionRouteImport.update({
+  id: '/settings/admission',
+  path: '/settings/admission',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsExaminationRoute =
+  AdminSettingsExaminationRouteImport.update({
+    id: '/settings/examination',
+    path: '/settings/examination',
+    getParentRoute: () => AdminRoute,
+  } as any)
+const AdminSettingsRegistrationRoute =
+  AdminSettingsRegistrationRouteImport.update({
+    id: '/settings/registration',
+    path: '/settings/registration',
+    getParentRoute: () => AdminRoute,
+  } as any)
+const AdminSettingsSemesterRoute = AdminSettingsSemesterRouteImport.update({
+  id: '/settings/semester',
+  path: '/settings/semester',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminUsersIndexRoute = AdminUsersIndexRouteImport.update({
+  id: '/users/',
+  path: '/users/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminUsersAssignmentsRoute = AdminUsersAssignmentsRouteImport.update({
+  id: '/users/assignments',
+  path: '/users/assignments',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminUsersPermissionsRoute = AdminUsersPermissionsRouteImport.update({
+  id: '/users/permissions',
+  path: '/users/permissions',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminUsersRolesRoute = AdminUsersRolesRouteImport.update({
+  id: '/users/roles',
+  path: '/users/roles',
+  getParentRoute: () => AdminRoute,
+} as any)
+const FacultyAdmissionAdmitted202526Route =
+  FacultyAdmissionAdmitted202526RouteImport.update({
+    id: '/admission/admitted-2025-26',
+    path: '/admission/admitted-2025-26',
     getParentRoute: () => FacultyRoute,
   } as any)
 const FacultyAdmissionAdmitted202627Route =
@@ -324,34 +579,177 @@ const FacultyAdmissionAdmitted202627Route =
     path: '/admission/admitted-2026-27',
     getParentRoute: () => FacultyRoute,
   } as any)
-const FacultyAdmissionAdmitted202526Route =
-  FacultyAdmissionAdmitted202526RouteImport.update({
-    id: '/admission/admitted-2025-26',
-    path: '/admission/admitted-2025-26',
+const FacultyAdmissionEligibleFyRoute =
+  FacultyAdmissionEligibleFyRouteImport.update({
+    id: '/admission/eligible-fy',
+    path: '/admission/eligible-fy',
     getParentRoute: () => FacultyRoute,
   } as any)
-const FacultyWorkloadMarksEntryFillRoute =
-  FacultyWorkloadMarksEntryFillRouteImport.update({
-    id: '/workload/marks-entry/fill',
-    path: '/workload/marks-entry/fill',
+const FacultyAdmissionEligibleSyRoute =
+  FacultyAdmissionEligibleSyRouteImport.update({
+    id: '/admission/eligible-sy',
+    path: '/admission/eligible-sy',
     getParentRoute: () => FacultyRoute,
   } as any)
-const FacultyWorkloadDetentionsProvisionalRoute =
-  FacultyWorkloadDetentionsProvisionalRouteImport.update({
-    id: '/workload/detentions/provisional',
-    path: '/workload/detentions/provisional',
+const FacultyAdmissionEligibleTyRoute =
+  FacultyAdmissionEligibleTyRouteImport.update({
+    id: '/admission/eligible-ty',
+    path: '/admission/eligible-ty',
     getParentRoute: () => FacultyRoute,
   } as any)
-const FacultyWorkloadDetentionsNilListRoute =
-  FacultyWorkloadDetentionsNilListRouteImport.update({
-    id: '/workload/detentions/nil-list',
-    path: '/workload/detentions/nil-list',
+const FacultyLacTheoryExamRoute = FacultyLacTheoryExamRouteImport.update({
+  id: '/lac/theory-exam',
+  path: '/lac/theory-exam',
+  getParentRoute: () => FacultyRoute,
+} as any)
+const FacultyOnlineExamQuestionBankRoute =
+  FacultyOnlineExamQuestionBankRouteImport.update({
+    id: '/online-exam/question-bank',
+    path: '/online-exam/question-bank',
     getParentRoute: () => FacultyRoute,
   } as any)
-const FacultyWorkloadDetentionsNilAddRoute =
-  FacultyWorkloadDetentionsNilAddRouteImport.update({
-    id: '/workload/detentions/nil-add',
-    path: '/workload/detentions/nil-add',
+const FacultyResultAnalysisBitwiseMarksRoute =
+  FacultyResultAnalysisBitwiseMarksRouteImport.update({
+    id: '/result-analysis/bitwise-marks',
+    path: '/result-analysis/bitwise-marks',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyResultAnalysisSummer2025Route =
+  FacultyResultAnalysisSummer2025RouteImport.update({
+    id: '/result-analysis/summer-2025',
+    path: '/result-analysis/summer-2025',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyResultAnalysisSummer2026Route =
+  FacultyResultAnalysisSummer2026RouteImport.update({
+    id: '/result-analysis/summer-2026',
+    path: '/result-analysis/summer-2026',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyResultAnalysisWinter2025Route =
+  FacultyResultAnalysisWinter2025RouteImport.update({
+    id: '/result-analysis/winter-2025',
+    path: '/result-analysis/winter-2025',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyStudentsCourseWiseRoute =
+  FacultyStudentsCourseWiseRouteImport.update({
+    id: '/students/course-wise',
+    path: '/students/course-wise',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyStudentsCourseWiseSaprRoute =
+  FacultyStudentsCourseWiseSaprRouteImport.update({
+    id: '/students/course-wise-sapr',
+    path: '/students/course-wise-sapr',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyStudentsEligibleRoute = FacultyStudentsEligibleRouteImport.update({
+  id: '/students/eligible',
+  path: '/students/eligible',
+  getParentRoute: () => FacultyRoute,
+} as any)
+const FacultyStudentsRegisteredRoute =
+  FacultyStudentsRegisteredRouteImport.update({
+    id: '/students/registered',
+    path: '/students/registered',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyStudentsRegistrationListRoute =
+  FacultyStudentsRegistrationListRouteImport.update({
+    id: '/students/registration-list',
+    path: '/students/registration-list',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const StudentExamRegistrationConfirmRoute =
+  StudentExamRegistrationConfirmRouteImport.update({
+    id: '/exam-registration/confirm',
+    path: '/exam-registration/confirm',
+    getParentRoute: () => StudentRoute,
+  } as any)
+const StudentExamRegistrationFillRoute =
+  StudentExamRegistrationFillRouteImport.update({
+    id: '/exam-registration/fill',
+    path: '/exam-registration/fill',
+    getParentRoute: () => StudentRoute,
+  } as any)
+const StudentExamRegistrationPaymentRoute =
+  StudentExamRegistrationPaymentRouteImport.update({
+    id: '/exam-registration/payment',
+    path: '/exam-registration/payment',
+    getParentRoute: () => StudentRoute,
+  } as any)
+const StudentExamRegistrationPrintRoute =
+  StudentExamRegistrationPrintRouteImport.update({
+    id: '/exam-registration/print',
+    path: '/exam-registration/print',
+    getParentRoute: () => StudentRoute,
+  } as any)
+const StudentExamRegistrationReceiptRoute =
+  StudentExamRegistrationReceiptRouteImport.update({
+    id: '/exam-registration/receipt',
+    path: '/exam-registration/receipt',
+    getParentRoute: () => StudentRoute,
+  } as any)
+const StudentFeedbackEndtermRoute = StudentFeedbackEndtermRouteImport.update({
+  id: '/feedback/endterm',
+  path: '/feedback/endterm',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentFeedbackMidtermRoute = StudentFeedbackMidtermRouteImport.update({
+  id: '/feedback/midterm',
+  path: '/feedback/midterm',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPhotocopyConfirmRoute = StudentPhotocopyConfirmRouteImport.update({
+  id: '/photocopy/confirm',
+  path: '/photocopy/confirm',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPhotocopyFillRoute = StudentPhotocopyFillRouteImport.update({
+  id: '/photocopy/fill',
+  path: '/photocopy/fill',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPhotocopyPaymentRoute = StudentPhotocopyPaymentRouteImport.update({
+  id: '/photocopy/payment',
+  path: '/photocopy/payment',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPhotocopyPrintRoute = StudentPhotocopyPrintRouteImport.update({
+  id: '/photocopy/print',
+  path: '/photocopy/print',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPhotocopyReceiptRoute = StudentPhotocopyReceiptRouteImport.update({
+  id: '/photocopy/receipt',
+  path: '/photocopy/receipt',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentYearWiseResultFyRoute = StudentYearWiseResultFyRouteImport.update({
+  id: '/year-wise-result/fy',
+  path: '/year-wise-result/fy',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentYearWiseResultSyRoute = StudentYearWiseResultSyRouteImport.update({
+  id: '/year-wise-result/sy',
+  path: '/year-wise-result/sy',
+  getParentRoute: () => StudentRoute,
+} as any)
+const AdminMasterFacultyIdRoute = AdminMasterFacultyIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => AdminMasterFacultyRoute,
+} as any)
+const AdminMasterStudentsIdRoute = AdminMasterStudentsIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => AdminMasterStudentsRoute,
+} as any)
+const FacultyWorkloadDetentionsAddRoute =
+  FacultyWorkloadDetentionsAddRouteImport.update({
+    id: '/workload/detentions/add',
+    path: '/workload/detentions/add',
     getParentRoute: () => FacultyRoute,
   } as any)
 const FacultyWorkloadDetentionsFinalRoute =
@@ -360,18 +758,38 @@ const FacultyWorkloadDetentionsFinalRoute =
     path: '/workload/detentions/final',
     getParentRoute: () => FacultyRoute,
   } as any)
-const FacultyWorkloadDetentionsAddRoute =
-  FacultyWorkloadDetentionsAddRouteImport.update({
-    id: '/workload/detentions/add',
-    path: '/workload/detentions/add',
+const FacultyWorkloadDetentionsNilAddRoute =
+  FacultyWorkloadDetentionsNilAddRouteImport.update({
+    id: '/workload/detentions/nil-add',
+    path: '/workload/detentions/nil-add',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyWorkloadDetentionsNilListRoute =
+  FacultyWorkloadDetentionsNilListRouteImport.update({
+    id: '/workload/detentions/nil-list',
+    path: '/workload/detentions/nil-list',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyWorkloadDetentionsProvisionalRoute =
+  FacultyWorkloadDetentionsProvisionalRouteImport.update({
+    id: '/workload/detentions/provisional',
+    path: '/workload/detentions/provisional',
+    getParentRoute: () => FacultyRoute,
+  } as any)
+const FacultyWorkloadMarksEntryFillRoute =
+  FacultyWorkloadMarksEntryFillRouteImport.update({
+    id: '/workload/marks-entry/fill',
+    path: '/workload/marks-entry/fill',
     getParentRoute: () => FacultyRoute,
   } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRouteWithChildren
   '/faculty': typeof FacultyRouteWithChildren
   '/login': typeof LoginRoute
   '/student': typeof StudentRouteWithChildren
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/faculty/change-password': typeof FacultyChangePasswordRoute
   '/faculty/dashboard': typeof FacultyDashboardRoute
   '/faculty/exam-result-history': typeof FacultyExamResultHistoryRoute
@@ -387,6 +805,66 @@ export interface FileRoutesByFullPath {
   '/student/result': typeof StudentResultRoute
   '/faculty/': typeof FacultyIndexRoute
   '/student/': typeof StudentIndexRoute
+  '/admin/academic/batches': typeof AdminAcademicBatchesRoute
+  '/admin/academic/branches': typeof AdminAcademicBranchesRoute
+  '/admin/academic/course-mappings': typeof AdminAcademicCourseMappingsRoute
+  '/admin/academic/course-types': typeof AdminAcademicCourseTypesRoute
+  '/admin/academic/courses': typeof AdminAcademicCoursesRoute
+  '/admin/academic/divisions': typeof AdminAcademicDivisionsRoute
+  '/admin/academic/programs': typeof AdminAcademicProgramsRoute
+  '/admin/academic/schemes': typeof AdminAcademicSchemesRoute
+  '/admin/academic/semesters': typeof AdminAcademicSemestersRoute
+  '/admin/academic/years': typeof AdminAcademicYearsRoute
+  '/admin/admissions/admitted': typeof AdminAdmissionsAdmittedRoute
+  '/admin/admissions/eligibility': typeof AdminAdmissionsEligibilityRoute
+  '/admin/admissions/eligible': typeof AdminAdmissionsEligibleRoute
+  '/admin/admissions/fees': typeof AdminAdmissionsFeesRoute
+  '/admin/admissions/settings': typeof AdminAdmissionsSettingsRoute
+  '/admin/admissions/summary': typeof AdminAdmissionsSummaryRoute
+  '/admin/analytics/results': typeof AdminAnalyticsResultsRoute
+  '/admin/data/import': typeof AdminDataImportRoute
+  '/admin/data/migration': typeof AdminDataMigrationRoute
+  '/admin/data/reconciliation': typeof AdminDataReconciliationRoute
+  '/admin/exams/course-registration': typeof AdminExamsCourseRegistrationRoute
+  '/admin/exams/courses': typeof AdminExamsCoursesRoute
+  '/admin/exams/eligibility': typeof AdminExamsEligibilityRoute
+  '/admin/exams/final-registration': typeof AdminExamsFinalRegistrationRoute
+  '/admin/exams/r': typeof AdminExamsRRoute
+  '/admin/exams/r-rr': typeof AdminExamsRRrRoute
+  '/admin/exams/registration-review': typeof AdminExamsRegistrationReviewRoute
+  '/admin/exams/rr': typeof AdminExamsRrRoute
+  '/admin/exams/sessions': typeof AdminExamsSessionsRoute
+  '/admin/exams/settings': typeof AdminExamsSettingsRoute
+  '/admin/exams/timetable': typeof AdminExamsTimetableRoute
+  '/admin/exams/timetable-settings': typeof AdminExamsTimetableSettingsRoute
+  '/admin/fees/heads': typeof AdminFeesHeadsRoute
+  '/admin/fees/payments': typeof AdminFeesPaymentsRoute
+  '/admin/fees/reconciliation': typeof AdminFeesReconciliationRoute
+  '/admin/fees/structures': typeof AdminFeesStructuresRoute
+  '/admin/master/faculty': typeof AdminMasterFacultyRouteWithChildren
+  '/admin/master/students': typeof AdminMasterStudentsRouteWithChildren
+  '/admin/operations/detention': typeof AdminOperationsDetentionRoute
+  '/admin/operations/internal-assessment': typeof AdminOperationsInternalAssessmentRoute
+  '/admin/operations/marks-monitoring': typeof AdminOperationsMarksMonitoringRoute
+  '/admin/reports/academic': typeof AdminReportsAcademicRoute
+  '/admin/reports/admission': typeof AdminReportsAdmissionRoute
+  '/admin/reports/examination': typeof AdminReportsExaminationRoute
+  '/admin/reports/fees': typeof AdminReportsFeesRoute
+  '/admin/reports/results': typeof AdminReportsResultsRoute
+  '/admin/results/backlogs': typeof AdminResultsBacklogsRoute
+  '/admin/results/finalization': typeof AdminResultsFinalizationRoute
+  '/admin/results/import': typeof AdminResultsImportRoute
+  '/admin/results/marksheets': typeof AdminResultsMarksheetsRoute
+  '/admin/results/processing': typeof AdminResultsProcessingRoute
+  '/admin/results/settings': typeof AdminResultsSettingsRoute
+  '/admin/results/verification': typeof AdminResultsVerificationRoute
+  '/admin/settings/admission': typeof AdminSettingsAdmissionRoute
+  '/admin/settings/examination': typeof AdminSettingsExaminationRoute
+  '/admin/settings/registration': typeof AdminSettingsRegistrationRoute
+  '/admin/settings/semester': typeof AdminSettingsSemesterRoute
+  '/admin/users/assignments': typeof AdminUsersAssignmentsRoute
+  '/admin/users/permissions': typeof AdminUsersPermissionsRoute
+  '/admin/users/roles': typeof AdminUsersRolesRoute
   '/faculty/admission/admitted-2025-26': typeof FacultyAdmissionAdmitted202526Route
   '/faculty/admission/admitted-2026-27': typeof FacultyAdmissionAdmitted202627Route
   '/faculty/admission/eligible-fy': typeof FacultyAdmissionEligibleFyRoute
@@ -417,6 +895,11 @@ export interface FileRoutesByFullPath {
   '/student/photocopy/receipt': typeof StudentPhotocopyReceiptRoute
   '/student/year-wise-result/fy': typeof StudentYearWiseResultFyRoute
   '/student/year-wise-result/sy': typeof StudentYearWiseResultSyRoute
+  '/admin/reports/': typeof AdminReportsIndexRoute
+  '/admin/settings/': typeof AdminSettingsIndexRoute
+  '/admin/users/': typeof AdminUsersIndexRoute
+  '/admin/master/faculty/$id': typeof AdminMasterFacultyIdRoute
+  '/admin/master/students/$id': typeof AdminMasterStudentsIdRoute
   '/faculty/workload/detentions/add': typeof FacultyWorkloadDetentionsAddRoute
   '/faculty/workload/detentions/final': typeof FacultyWorkloadDetentionsFinalRoute
   '/faculty/workload/detentions/nil-add': typeof FacultyWorkloadDetentionsNilAddRoute
@@ -426,7 +909,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRouteWithChildren
   '/login': typeof LoginRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/faculty/change-password': typeof FacultyChangePasswordRoute
   '/faculty/dashboard': typeof FacultyDashboardRoute
   '/faculty/exam-result-history': typeof FacultyExamResultHistoryRoute
@@ -442,6 +927,66 @@ export interface FileRoutesByTo {
   '/student/result': typeof StudentResultRoute
   '/faculty': typeof FacultyIndexRoute
   '/student': typeof StudentIndexRoute
+  '/admin/academic/batches': typeof AdminAcademicBatchesRoute
+  '/admin/academic/branches': typeof AdminAcademicBranchesRoute
+  '/admin/academic/course-mappings': typeof AdminAcademicCourseMappingsRoute
+  '/admin/academic/course-types': typeof AdminAcademicCourseTypesRoute
+  '/admin/academic/courses': typeof AdminAcademicCoursesRoute
+  '/admin/academic/divisions': typeof AdminAcademicDivisionsRoute
+  '/admin/academic/programs': typeof AdminAcademicProgramsRoute
+  '/admin/academic/schemes': typeof AdminAcademicSchemesRoute
+  '/admin/academic/semesters': typeof AdminAcademicSemestersRoute
+  '/admin/academic/years': typeof AdminAcademicYearsRoute
+  '/admin/admissions/admitted': typeof AdminAdmissionsAdmittedRoute
+  '/admin/admissions/eligibility': typeof AdminAdmissionsEligibilityRoute
+  '/admin/admissions/eligible': typeof AdminAdmissionsEligibleRoute
+  '/admin/admissions/fees': typeof AdminAdmissionsFeesRoute
+  '/admin/admissions/settings': typeof AdminAdmissionsSettingsRoute
+  '/admin/admissions/summary': typeof AdminAdmissionsSummaryRoute
+  '/admin/analytics/results': typeof AdminAnalyticsResultsRoute
+  '/admin/data/import': typeof AdminDataImportRoute
+  '/admin/data/migration': typeof AdminDataMigrationRoute
+  '/admin/data/reconciliation': typeof AdminDataReconciliationRoute
+  '/admin/exams/course-registration': typeof AdminExamsCourseRegistrationRoute
+  '/admin/exams/courses': typeof AdminExamsCoursesRoute
+  '/admin/exams/eligibility': typeof AdminExamsEligibilityRoute
+  '/admin/exams/final-registration': typeof AdminExamsFinalRegistrationRoute
+  '/admin/exams/r': typeof AdminExamsRRoute
+  '/admin/exams/r-rr': typeof AdminExamsRRrRoute
+  '/admin/exams/registration-review': typeof AdminExamsRegistrationReviewRoute
+  '/admin/exams/rr': typeof AdminExamsRrRoute
+  '/admin/exams/sessions': typeof AdminExamsSessionsRoute
+  '/admin/exams/settings': typeof AdminExamsSettingsRoute
+  '/admin/exams/timetable': typeof AdminExamsTimetableRoute
+  '/admin/exams/timetable-settings': typeof AdminExamsTimetableSettingsRoute
+  '/admin/fees/heads': typeof AdminFeesHeadsRoute
+  '/admin/fees/payments': typeof AdminFeesPaymentsRoute
+  '/admin/fees/reconciliation': typeof AdminFeesReconciliationRoute
+  '/admin/fees/structures': typeof AdminFeesStructuresRoute
+  '/admin/master/faculty': typeof AdminMasterFacultyRouteWithChildren
+  '/admin/master/students': typeof AdminMasterStudentsRouteWithChildren
+  '/admin/operations/detention': typeof AdminOperationsDetentionRoute
+  '/admin/operations/internal-assessment': typeof AdminOperationsInternalAssessmentRoute
+  '/admin/operations/marks-monitoring': typeof AdminOperationsMarksMonitoringRoute
+  '/admin/reports/academic': typeof AdminReportsAcademicRoute
+  '/admin/reports/admission': typeof AdminReportsAdmissionRoute
+  '/admin/reports/examination': typeof AdminReportsExaminationRoute
+  '/admin/reports/fees': typeof AdminReportsFeesRoute
+  '/admin/reports/results': typeof AdminReportsResultsRoute
+  '/admin/results/backlogs': typeof AdminResultsBacklogsRoute
+  '/admin/results/finalization': typeof AdminResultsFinalizationRoute
+  '/admin/results/import': typeof AdminResultsImportRoute
+  '/admin/results/marksheets': typeof AdminResultsMarksheetsRoute
+  '/admin/results/processing': typeof AdminResultsProcessingRoute
+  '/admin/results/settings': typeof AdminResultsSettingsRoute
+  '/admin/results/verification': typeof AdminResultsVerificationRoute
+  '/admin/settings/admission': typeof AdminSettingsAdmissionRoute
+  '/admin/settings/examination': typeof AdminSettingsExaminationRoute
+  '/admin/settings/registration': typeof AdminSettingsRegistrationRoute
+  '/admin/settings/semester': typeof AdminSettingsSemesterRoute
+  '/admin/users/assignments': typeof AdminUsersAssignmentsRoute
+  '/admin/users/permissions': typeof AdminUsersPermissionsRoute
+  '/admin/users/roles': typeof AdminUsersRolesRoute
   '/faculty/admission/admitted-2025-26': typeof FacultyAdmissionAdmitted202526Route
   '/faculty/admission/admitted-2026-27': typeof FacultyAdmissionAdmitted202627Route
   '/faculty/admission/eligible-fy': typeof FacultyAdmissionEligibleFyRoute
@@ -472,6 +1017,11 @@ export interface FileRoutesByTo {
   '/student/photocopy/receipt': typeof StudentPhotocopyReceiptRoute
   '/student/year-wise-result/fy': typeof StudentYearWiseResultFyRoute
   '/student/year-wise-result/sy': typeof StudentYearWiseResultSyRoute
+  '/admin/reports': typeof AdminReportsIndexRoute
+  '/admin/settings': typeof AdminSettingsIndexRoute
+  '/admin/users': typeof AdminUsersIndexRoute
+  '/admin/master/faculty/$id': typeof AdminMasterFacultyIdRoute
+  '/admin/master/students/$id': typeof AdminMasterStudentsIdRoute
   '/faculty/workload/detentions/add': typeof FacultyWorkloadDetentionsAddRoute
   '/faculty/workload/detentions/final': typeof FacultyWorkloadDetentionsFinalRoute
   '/faculty/workload/detentions/nil-add': typeof FacultyWorkloadDetentionsNilAddRoute
@@ -482,9 +1032,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRouteWithChildren
   '/faculty': typeof FacultyRouteWithChildren
   '/login': typeof LoginRoute
   '/student': typeof StudentRouteWithChildren
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/faculty/change-password': typeof FacultyChangePasswordRoute
   '/faculty/dashboard': typeof FacultyDashboardRoute
   '/faculty/exam-result-history': typeof FacultyExamResultHistoryRoute
@@ -500,6 +1052,66 @@ export interface FileRoutesById {
   '/student/result': typeof StudentResultRoute
   '/faculty/': typeof FacultyIndexRoute
   '/student/': typeof StudentIndexRoute
+  '/admin/academic/batches': typeof AdminAcademicBatchesRoute
+  '/admin/academic/branches': typeof AdminAcademicBranchesRoute
+  '/admin/academic/course-mappings': typeof AdminAcademicCourseMappingsRoute
+  '/admin/academic/course-types': typeof AdminAcademicCourseTypesRoute
+  '/admin/academic/courses': typeof AdminAcademicCoursesRoute
+  '/admin/academic/divisions': typeof AdminAcademicDivisionsRoute
+  '/admin/academic/programs': typeof AdminAcademicProgramsRoute
+  '/admin/academic/schemes': typeof AdminAcademicSchemesRoute
+  '/admin/academic/semesters': typeof AdminAcademicSemestersRoute
+  '/admin/academic/years': typeof AdminAcademicYearsRoute
+  '/admin/admissions/admitted': typeof AdminAdmissionsAdmittedRoute
+  '/admin/admissions/eligibility': typeof AdminAdmissionsEligibilityRoute
+  '/admin/admissions/eligible': typeof AdminAdmissionsEligibleRoute
+  '/admin/admissions/fees': typeof AdminAdmissionsFeesRoute
+  '/admin/admissions/settings': typeof AdminAdmissionsSettingsRoute
+  '/admin/admissions/summary': typeof AdminAdmissionsSummaryRoute
+  '/admin/analytics/results': typeof AdminAnalyticsResultsRoute
+  '/admin/data/import': typeof AdminDataImportRoute
+  '/admin/data/migration': typeof AdminDataMigrationRoute
+  '/admin/data/reconciliation': typeof AdminDataReconciliationRoute
+  '/admin/exams/course-registration': typeof AdminExamsCourseRegistrationRoute
+  '/admin/exams/courses': typeof AdminExamsCoursesRoute
+  '/admin/exams/eligibility': typeof AdminExamsEligibilityRoute
+  '/admin/exams/final-registration': typeof AdminExamsFinalRegistrationRoute
+  '/admin/exams/r': typeof AdminExamsRRoute
+  '/admin/exams/r-rr': typeof AdminExamsRRrRoute
+  '/admin/exams/registration-review': typeof AdminExamsRegistrationReviewRoute
+  '/admin/exams/rr': typeof AdminExamsRrRoute
+  '/admin/exams/sessions': typeof AdminExamsSessionsRoute
+  '/admin/exams/settings': typeof AdminExamsSettingsRoute
+  '/admin/exams/timetable': typeof AdminExamsTimetableRoute
+  '/admin/exams/timetable-settings': typeof AdminExamsTimetableSettingsRoute
+  '/admin/fees/heads': typeof AdminFeesHeadsRoute
+  '/admin/fees/payments': typeof AdminFeesPaymentsRoute
+  '/admin/fees/reconciliation': typeof AdminFeesReconciliationRoute
+  '/admin/fees/structures': typeof AdminFeesStructuresRoute
+  '/admin/master/faculty': typeof AdminMasterFacultyRouteWithChildren
+  '/admin/master/students': typeof AdminMasterStudentsRouteWithChildren
+  '/admin/operations/detention': typeof AdminOperationsDetentionRoute
+  '/admin/operations/internal-assessment': typeof AdminOperationsInternalAssessmentRoute
+  '/admin/operations/marks-monitoring': typeof AdminOperationsMarksMonitoringRoute
+  '/admin/reports/academic': typeof AdminReportsAcademicRoute
+  '/admin/reports/admission': typeof AdminReportsAdmissionRoute
+  '/admin/reports/examination': typeof AdminReportsExaminationRoute
+  '/admin/reports/fees': typeof AdminReportsFeesRoute
+  '/admin/reports/results': typeof AdminReportsResultsRoute
+  '/admin/results/backlogs': typeof AdminResultsBacklogsRoute
+  '/admin/results/finalization': typeof AdminResultsFinalizationRoute
+  '/admin/results/import': typeof AdminResultsImportRoute
+  '/admin/results/marksheets': typeof AdminResultsMarksheetsRoute
+  '/admin/results/processing': typeof AdminResultsProcessingRoute
+  '/admin/results/settings': typeof AdminResultsSettingsRoute
+  '/admin/results/verification': typeof AdminResultsVerificationRoute
+  '/admin/settings/admission': typeof AdminSettingsAdmissionRoute
+  '/admin/settings/examination': typeof AdminSettingsExaminationRoute
+  '/admin/settings/registration': typeof AdminSettingsRegistrationRoute
+  '/admin/settings/semester': typeof AdminSettingsSemesterRoute
+  '/admin/users/assignments': typeof AdminUsersAssignmentsRoute
+  '/admin/users/permissions': typeof AdminUsersPermissionsRoute
+  '/admin/users/roles': typeof AdminUsersRolesRoute
   '/faculty/admission/admitted-2025-26': typeof FacultyAdmissionAdmitted202526Route
   '/faculty/admission/admitted-2026-27': typeof FacultyAdmissionAdmitted202627Route
   '/faculty/admission/eligible-fy': typeof FacultyAdmissionEligibleFyRoute
@@ -530,6 +1142,11 @@ export interface FileRoutesById {
   '/student/photocopy/receipt': typeof StudentPhotocopyReceiptRoute
   '/student/year-wise-result/fy': typeof StudentYearWiseResultFyRoute
   '/student/year-wise-result/sy': typeof StudentYearWiseResultSyRoute
+  '/admin/reports/': typeof AdminReportsIndexRoute
+  '/admin/settings/': typeof AdminSettingsIndexRoute
+  '/admin/users/': typeof AdminUsersIndexRoute
+  '/admin/master/faculty/$id': typeof AdminMasterFacultyIdRoute
+  '/admin/master/students/$id': typeof AdminMasterStudentsIdRoute
   '/faculty/workload/detentions/add': typeof FacultyWorkloadDetentionsAddRoute
   '/faculty/workload/detentions/final': typeof FacultyWorkloadDetentionsFinalRoute
   '/faculty/workload/detentions/nil-add': typeof FacultyWorkloadDetentionsNilAddRoute
@@ -541,9 +1158,11 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/admin'
     | '/faculty'
     | '/login'
     | '/student'
+    | '/admin/dashboard'
     | '/faculty/change-password'
     | '/faculty/dashboard'
     | '/faculty/exam-result-history'
@@ -559,6 +1178,66 @@ export interface FileRouteTypes {
     | '/student/result'
     | '/faculty/'
     | '/student/'
+    | '/admin/academic/batches'
+    | '/admin/academic/branches'
+    | '/admin/academic/course-mappings'
+    | '/admin/academic/course-types'
+    | '/admin/academic/courses'
+    | '/admin/academic/divisions'
+    | '/admin/academic/programs'
+    | '/admin/academic/schemes'
+    | '/admin/academic/semesters'
+    | '/admin/academic/years'
+    | '/admin/admissions/admitted'
+    | '/admin/admissions/eligibility'
+    | '/admin/admissions/eligible'
+    | '/admin/admissions/fees'
+    | '/admin/admissions/settings'
+    | '/admin/admissions/summary'
+    | '/admin/analytics/results'
+    | '/admin/data/import'
+    | '/admin/data/migration'
+    | '/admin/data/reconciliation'
+    | '/admin/exams/course-registration'
+    | '/admin/exams/courses'
+    | '/admin/exams/eligibility'
+    | '/admin/exams/final-registration'
+    | '/admin/exams/r'
+    | '/admin/exams/r-rr'
+    | '/admin/exams/registration-review'
+    | '/admin/exams/rr'
+    | '/admin/exams/sessions'
+    | '/admin/exams/settings'
+    | '/admin/exams/timetable'
+    | '/admin/exams/timetable-settings'
+    | '/admin/fees/heads'
+    | '/admin/fees/payments'
+    | '/admin/fees/reconciliation'
+    | '/admin/fees/structures'
+    | '/admin/master/faculty'
+    | '/admin/master/students'
+    | '/admin/operations/detention'
+    | '/admin/operations/internal-assessment'
+    | '/admin/operations/marks-monitoring'
+    | '/admin/reports/academic'
+    | '/admin/reports/admission'
+    | '/admin/reports/examination'
+    | '/admin/reports/fees'
+    | '/admin/reports/results'
+    | '/admin/results/backlogs'
+    | '/admin/results/finalization'
+    | '/admin/results/import'
+    | '/admin/results/marksheets'
+    | '/admin/results/processing'
+    | '/admin/results/settings'
+    | '/admin/results/verification'
+    | '/admin/settings/admission'
+    | '/admin/settings/examination'
+    | '/admin/settings/registration'
+    | '/admin/settings/semester'
+    | '/admin/users/assignments'
+    | '/admin/users/permissions'
+    | '/admin/users/roles'
     | '/faculty/admission/admitted-2025-26'
     | '/faculty/admission/admitted-2026-27'
     | '/faculty/admission/eligible-fy'
@@ -589,6 +1268,11 @@ export interface FileRouteTypes {
     | '/student/photocopy/receipt'
     | '/student/year-wise-result/fy'
     | '/student/year-wise-result/sy'
+    | '/admin/reports/'
+    | '/admin/settings/'
+    | '/admin/users/'
+    | '/admin/master/faculty/$id'
+    | '/admin/master/students/$id'
     | '/faculty/workload/detentions/add'
     | '/faculty/workload/detentions/final'
     | '/faculty/workload/detentions/nil-add'
@@ -598,7 +1282,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/admin'
     | '/login'
+    | '/admin/dashboard'
     | '/faculty/change-password'
     | '/faculty/dashboard'
     | '/faculty/exam-result-history'
@@ -614,6 +1300,66 @@ export interface FileRouteTypes {
     | '/student/result'
     | '/faculty'
     | '/student'
+    | '/admin/academic/batches'
+    | '/admin/academic/branches'
+    | '/admin/academic/course-mappings'
+    | '/admin/academic/course-types'
+    | '/admin/academic/courses'
+    | '/admin/academic/divisions'
+    | '/admin/academic/programs'
+    | '/admin/academic/schemes'
+    | '/admin/academic/semesters'
+    | '/admin/academic/years'
+    | '/admin/admissions/admitted'
+    | '/admin/admissions/eligibility'
+    | '/admin/admissions/eligible'
+    | '/admin/admissions/fees'
+    | '/admin/admissions/settings'
+    | '/admin/admissions/summary'
+    | '/admin/analytics/results'
+    | '/admin/data/import'
+    | '/admin/data/migration'
+    | '/admin/data/reconciliation'
+    | '/admin/exams/course-registration'
+    | '/admin/exams/courses'
+    | '/admin/exams/eligibility'
+    | '/admin/exams/final-registration'
+    | '/admin/exams/r'
+    | '/admin/exams/r-rr'
+    | '/admin/exams/registration-review'
+    | '/admin/exams/rr'
+    | '/admin/exams/sessions'
+    | '/admin/exams/settings'
+    | '/admin/exams/timetable'
+    | '/admin/exams/timetable-settings'
+    | '/admin/fees/heads'
+    | '/admin/fees/payments'
+    | '/admin/fees/reconciliation'
+    | '/admin/fees/structures'
+    | '/admin/master/faculty'
+    | '/admin/master/students'
+    | '/admin/operations/detention'
+    | '/admin/operations/internal-assessment'
+    | '/admin/operations/marks-monitoring'
+    | '/admin/reports/academic'
+    | '/admin/reports/admission'
+    | '/admin/reports/examination'
+    | '/admin/reports/fees'
+    | '/admin/reports/results'
+    | '/admin/results/backlogs'
+    | '/admin/results/finalization'
+    | '/admin/results/import'
+    | '/admin/results/marksheets'
+    | '/admin/results/processing'
+    | '/admin/results/settings'
+    | '/admin/results/verification'
+    | '/admin/settings/admission'
+    | '/admin/settings/examination'
+    | '/admin/settings/registration'
+    | '/admin/settings/semester'
+    | '/admin/users/assignments'
+    | '/admin/users/permissions'
+    | '/admin/users/roles'
     | '/faculty/admission/admitted-2025-26'
     | '/faculty/admission/admitted-2026-27'
     | '/faculty/admission/eligible-fy'
@@ -644,6 +1390,11 @@ export interface FileRouteTypes {
     | '/student/photocopy/receipt'
     | '/student/year-wise-result/fy'
     | '/student/year-wise-result/sy'
+    | '/admin/reports'
+    | '/admin/settings'
+    | '/admin/users'
+    | '/admin/master/faculty/$id'
+    | '/admin/master/students/$id'
     | '/faculty/workload/detentions/add'
     | '/faculty/workload/detentions/final'
     | '/faculty/workload/detentions/nil-add'
@@ -653,9 +1404,11 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/admin'
     | '/faculty'
     | '/login'
     | '/student'
+    | '/admin/dashboard'
     | '/faculty/change-password'
     | '/faculty/dashboard'
     | '/faculty/exam-result-history'
@@ -671,6 +1424,66 @@ export interface FileRouteTypes {
     | '/student/result'
     | '/faculty/'
     | '/student/'
+    | '/admin/academic/batches'
+    | '/admin/academic/branches'
+    | '/admin/academic/course-mappings'
+    | '/admin/academic/course-types'
+    | '/admin/academic/courses'
+    | '/admin/academic/divisions'
+    | '/admin/academic/programs'
+    | '/admin/academic/schemes'
+    | '/admin/academic/semesters'
+    | '/admin/academic/years'
+    | '/admin/admissions/admitted'
+    | '/admin/admissions/eligibility'
+    | '/admin/admissions/eligible'
+    | '/admin/admissions/fees'
+    | '/admin/admissions/settings'
+    | '/admin/admissions/summary'
+    | '/admin/analytics/results'
+    | '/admin/data/import'
+    | '/admin/data/migration'
+    | '/admin/data/reconciliation'
+    | '/admin/exams/course-registration'
+    | '/admin/exams/courses'
+    | '/admin/exams/eligibility'
+    | '/admin/exams/final-registration'
+    | '/admin/exams/r'
+    | '/admin/exams/r-rr'
+    | '/admin/exams/registration-review'
+    | '/admin/exams/rr'
+    | '/admin/exams/sessions'
+    | '/admin/exams/settings'
+    | '/admin/exams/timetable'
+    | '/admin/exams/timetable-settings'
+    | '/admin/fees/heads'
+    | '/admin/fees/payments'
+    | '/admin/fees/reconciliation'
+    | '/admin/fees/structures'
+    | '/admin/master/faculty'
+    | '/admin/master/students'
+    | '/admin/operations/detention'
+    | '/admin/operations/internal-assessment'
+    | '/admin/operations/marks-monitoring'
+    | '/admin/reports/academic'
+    | '/admin/reports/admission'
+    | '/admin/reports/examination'
+    | '/admin/reports/fees'
+    | '/admin/reports/results'
+    | '/admin/results/backlogs'
+    | '/admin/results/finalization'
+    | '/admin/results/import'
+    | '/admin/results/marksheets'
+    | '/admin/results/processing'
+    | '/admin/results/settings'
+    | '/admin/results/verification'
+    | '/admin/settings/admission'
+    | '/admin/settings/examination'
+    | '/admin/settings/registration'
+    | '/admin/settings/semester'
+    | '/admin/users/assignments'
+    | '/admin/users/permissions'
+    | '/admin/users/roles'
     | '/faculty/admission/admitted-2025-26'
     | '/faculty/admission/admitted-2026-27'
     | '/faculty/admission/eligible-fy'
@@ -701,6 +1514,11 @@ export interface FileRouteTypes {
     | '/student/photocopy/receipt'
     | '/student/year-wise-result/fy'
     | '/student/year-wise-result/sy'
+    | '/admin/reports/'
+    | '/admin/settings/'
+    | '/admin/users/'
+    | '/admin/master/faculty/$id'
+    | '/admin/master/students/$id'
     | '/faculty/workload/detentions/add'
     | '/faculty/workload/detentions/final'
     | '/faculty/workload/detentions/nil-add'
@@ -711,6 +1529,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRouteWithChildren
   FacultyRoute: typeof FacultyRouteWithChildren
   LoginRoute: typeof LoginRoute
   StudentRoute: typeof StudentRouteWithChildren
@@ -718,18 +1537,18 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/student': {
-      id: '/student'
-      path: '/student'
-      fullPath: '/student'
-      preLoaderRoute: typeof StudentRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faculty': {
@@ -739,109 +1558,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FacultyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/student/': {
-      id: '/student/'
-      path: '/'
-      fullPath: '/student/'
-      preLoaderRoute: typeof StudentIndexRouteImport
-      parentRoute: typeof StudentRoute
+    '/student': {
+      id: '/student'
+      path: '/student'
+      fullPath: '/student'
+      preLoaderRoute: typeof StudentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/dashboard': {
+      id: '/admin/dashboard'
+      path: '/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof AdminRoute
     }
     '/faculty/': {
       id: '/faculty/'
       path: '/'
       fullPath: '/faculty/'
       preLoaderRoute: typeof FacultyIndexRouteImport
-      parentRoute: typeof FacultyRoute
-    }
-    '/student/result': {
-      id: '/student/result'
-      path: '/result'
-      fullPath: '/student/result'
-      preLoaderRoute: typeof StudentResultRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/profile': {
-      id: '/student/profile'
-      path: '/profile'
-      fullPath: '/student/profile'
-      preLoaderRoute: typeof StudentProfileRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/payment-history': {
-      id: '/student/payment-history'
-      path: '/payment-history'
-      fullPath: '/student/payment-history'
-      preLoaderRoute: typeof StudentPaymentHistoryRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/online-exam': {
-      id: '/student/online-exam'
-      path: '/online-exam'
-      fullPath: '/student/online-exam'
-      preLoaderRoute: typeof StudentOnlineExamRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/facility-feedback': {
-      id: '/student/facility-feedback'
-      path: '/facility-feedback'
-      fullPath: '/student/facility-feedback'
-      preLoaderRoute: typeof StudentFacilityFeedbackRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/duplicate-id': {
-      id: '/student/duplicate-id'
-      path: '/duplicate-id'
-      fullPath: '/student/duplicate-id'
-      preLoaderRoute: typeof StudentDuplicateIdRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/dashboard': {
-      id: '/student/dashboard'
-      path: '/dashboard'
-      fullPath: '/student/dashboard'
-      preLoaderRoute: typeof StudentDashboardRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/change-password': {
-      id: '/student/change-password'
-      path: '/change-password'
-      fullPath: '/student/change-password'
-      preLoaderRoute: typeof StudentChangePasswordRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/admission-fee': {
-      id: '/student/admission-fee'
-      path: '/admission-fee'
-      fullPath: '/student/admission-fee'
-      preLoaderRoute: typeof StudentAdmissionFeeRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/faculty/profile': {
-      id: '/faculty/profile'
-      path: '/profile'
-      fullPath: '/faculty/profile'
-      preLoaderRoute: typeof FacultyProfileRouteImport
-      parentRoute: typeof FacultyRoute
-    }
-    '/faculty/exam-result-history': {
-      id: '/faculty/exam-result-history'
-      path: '/exam-result-history'
-      fullPath: '/faculty/exam-result-history'
-      preLoaderRoute: typeof FacultyExamResultHistoryRouteImport
-      parentRoute: typeof FacultyRoute
-    }
-    '/faculty/dashboard': {
-      id: '/faculty/dashboard'
-      path: '/dashboard'
-      fullPath: '/faculty/dashboard'
-      preLoaderRoute: typeof FacultyDashboardRouteImport
       parentRoute: typeof FacultyRoute
     }
     '/faculty/change-password': {
@@ -851,200 +1593,543 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FacultyChangePasswordRouteImport
       parentRoute: typeof FacultyRoute
     }
-    '/student/year-wise-result/sy': {
-      id: '/student/year-wise-result/sy'
-      path: '/year-wise-result/sy'
-      fullPath: '/student/year-wise-result/sy'
-      preLoaderRoute: typeof StudentYearWiseResultSyRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/year-wise-result/fy': {
-      id: '/student/year-wise-result/fy'
-      path: '/year-wise-result/fy'
-      fullPath: '/student/year-wise-result/fy'
-      preLoaderRoute: typeof StudentYearWiseResultFyRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/photocopy/receipt': {
-      id: '/student/photocopy/receipt'
-      path: '/photocopy/receipt'
-      fullPath: '/student/photocopy/receipt'
-      preLoaderRoute: typeof StudentPhotocopyReceiptRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/photocopy/print': {
-      id: '/student/photocopy/print'
-      path: '/photocopy/print'
-      fullPath: '/student/photocopy/print'
-      preLoaderRoute: typeof StudentPhotocopyPrintRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/photocopy/payment': {
-      id: '/student/photocopy/payment'
-      path: '/photocopy/payment'
-      fullPath: '/student/photocopy/payment'
-      preLoaderRoute: typeof StudentPhotocopyPaymentRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/photocopy/fill': {
-      id: '/student/photocopy/fill'
-      path: '/photocopy/fill'
-      fullPath: '/student/photocopy/fill'
-      preLoaderRoute: typeof StudentPhotocopyFillRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/photocopy/confirm': {
-      id: '/student/photocopy/confirm'
-      path: '/photocopy/confirm'
-      fullPath: '/student/photocopy/confirm'
-      preLoaderRoute: typeof StudentPhotocopyConfirmRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/feedback/midterm': {
-      id: '/student/feedback/midterm'
-      path: '/feedback/midterm'
-      fullPath: '/student/feedback/midterm'
-      preLoaderRoute: typeof StudentFeedbackMidtermRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/feedback/endterm': {
-      id: '/student/feedback/endterm'
-      path: '/feedback/endterm'
-      fullPath: '/student/feedback/endterm'
-      preLoaderRoute: typeof StudentFeedbackEndtermRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/exam-registration/receipt': {
-      id: '/student/exam-registration/receipt'
-      path: '/exam-registration/receipt'
-      fullPath: '/student/exam-registration/receipt'
-      preLoaderRoute: typeof StudentExamRegistrationReceiptRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/exam-registration/print': {
-      id: '/student/exam-registration/print'
-      path: '/exam-registration/print'
-      fullPath: '/student/exam-registration/print'
-      preLoaderRoute: typeof StudentExamRegistrationPrintRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/exam-registration/payment': {
-      id: '/student/exam-registration/payment'
-      path: '/exam-registration/payment'
-      fullPath: '/student/exam-registration/payment'
-      preLoaderRoute: typeof StudentExamRegistrationPaymentRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/exam-registration/fill': {
-      id: '/student/exam-registration/fill'
-      path: '/exam-registration/fill'
-      fullPath: '/student/exam-registration/fill'
-      preLoaderRoute: typeof StudentExamRegistrationFillRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/student/exam-registration/confirm': {
-      id: '/student/exam-registration/confirm'
-      path: '/exam-registration/confirm'
-      fullPath: '/student/exam-registration/confirm'
-      preLoaderRoute: typeof StudentExamRegistrationConfirmRouteImport
-      parentRoute: typeof StudentRoute
-    }
-    '/faculty/students/registration-list': {
-      id: '/faculty/students/registration-list'
-      path: '/students/registration-list'
-      fullPath: '/faculty/students/registration-list'
-      preLoaderRoute: typeof FacultyStudentsRegistrationListRouteImport
+    '/faculty/dashboard': {
+      id: '/faculty/dashboard'
+      path: '/dashboard'
+      fullPath: '/faculty/dashboard'
+      preLoaderRoute: typeof FacultyDashboardRouteImport
       parentRoute: typeof FacultyRoute
     }
-    '/faculty/students/registered': {
-      id: '/faculty/students/registered'
-      path: '/students/registered'
-      fullPath: '/faculty/students/registered'
-      preLoaderRoute: typeof FacultyStudentsRegisteredRouteImport
+    '/faculty/exam-result-history': {
+      id: '/faculty/exam-result-history'
+      path: '/exam-result-history'
+      fullPath: '/faculty/exam-result-history'
+      preLoaderRoute: typeof FacultyExamResultHistoryRouteImport
       parentRoute: typeof FacultyRoute
     }
-    '/faculty/students/eligible': {
-      id: '/faculty/students/eligible'
-      path: '/students/eligible'
-      fullPath: '/faculty/students/eligible'
-      preLoaderRoute: typeof FacultyStudentsEligibleRouteImport
+    '/faculty/profile': {
+      id: '/faculty/profile'
+      path: '/profile'
+      fullPath: '/faculty/profile'
+      preLoaderRoute: typeof FacultyProfileRouteImport
       parentRoute: typeof FacultyRoute
     }
-    '/faculty/students/course-wise-sapr': {
-      id: '/faculty/students/course-wise-sapr'
-      path: '/students/course-wise-sapr'
-      fullPath: '/faculty/students/course-wise-sapr'
-      preLoaderRoute: typeof FacultyStudentsCourseWiseSaprRouteImport
-      parentRoute: typeof FacultyRoute
+    '/student/': {
+      id: '/student/'
+      path: '/'
+      fullPath: '/student/'
+      preLoaderRoute: typeof StudentIndexRouteImport
+      parentRoute: typeof StudentRoute
     }
-    '/faculty/students/course-wise': {
-      id: '/faculty/students/course-wise'
-      path: '/students/course-wise'
-      fullPath: '/faculty/students/course-wise'
-      preLoaderRoute: typeof FacultyStudentsCourseWiseRouteImport
-      parentRoute: typeof FacultyRoute
+    '/student/admission-fee': {
+      id: '/student/admission-fee'
+      path: '/admission-fee'
+      fullPath: '/student/admission-fee'
+      preLoaderRoute: typeof StudentAdmissionFeeRouteImport
+      parentRoute: typeof StudentRoute
     }
-    '/faculty/result-analysis/winter-2025': {
-      id: '/faculty/result-analysis/winter-2025'
-      path: '/result-analysis/winter-2025'
-      fullPath: '/faculty/result-analysis/winter-2025'
-      preLoaderRoute: typeof FacultyResultAnalysisWinter2025RouteImport
-      parentRoute: typeof FacultyRoute
+    '/student/change-password': {
+      id: '/student/change-password'
+      path: '/change-password'
+      fullPath: '/student/change-password'
+      preLoaderRoute: typeof StudentChangePasswordRouteImport
+      parentRoute: typeof StudentRoute
     }
-    '/faculty/result-analysis/summer-2026': {
-      id: '/faculty/result-analysis/summer-2026'
-      path: '/result-analysis/summer-2026'
-      fullPath: '/faculty/result-analysis/summer-2026'
-      preLoaderRoute: typeof FacultyResultAnalysisSummer2026RouteImport
-      parentRoute: typeof FacultyRoute
+    '/student/dashboard': {
+      id: '/student/dashboard'
+      path: '/dashboard'
+      fullPath: '/student/dashboard'
+      preLoaderRoute: typeof StudentDashboardRouteImport
+      parentRoute: typeof StudentRoute
     }
-    '/faculty/result-analysis/summer-2025': {
-      id: '/faculty/result-analysis/summer-2025'
-      path: '/result-analysis/summer-2025'
-      fullPath: '/faculty/result-analysis/summer-2025'
-      preLoaderRoute: typeof FacultyResultAnalysisSummer2025RouteImport
-      parentRoute: typeof FacultyRoute
+    '/student/duplicate-id': {
+      id: '/student/duplicate-id'
+      path: '/duplicate-id'
+      fullPath: '/student/duplicate-id'
+      preLoaderRoute: typeof StudentDuplicateIdRouteImport
+      parentRoute: typeof StudentRoute
     }
-    '/faculty/result-analysis/bitwise-marks': {
-      id: '/faculty/result-analysis/bitwise-marks'
-      path: '/result-analysis/bitwise-marks'
-      fullPath: '/faculty/result-analysis/bitwise-marks'
-      preLoaderRoute: typeof FacultyResultAnalysisBitwiseMarksRouteImport
-      parentRoute: typeof FacultyRoute
+    '/student/facility-feedback': {
+      id: '/student/facility-feedback'
+      path: '/facility-feedback'
+      fullPath: '/student/facility-feedback'
+      preLoaderRoute: typeof StudentFacilityFeedbackRouteImport
+      parentRoute: typeof StudentRoute
     }
-    '/faculty/online-exam/question-bank': {
-      id: '/faculty/online-exam/question-bank'
-      path: '/online-exam/question-bank'
-      fullPath: '/faculty/online-exam/question-bank'
-      preLoaderRoute: typeof FacultyOnlineExamQuestionBankRouteImport
-      parentRoute: typeof FacultyRoute
+    '/student/online-exam': {
+      id: '/student/online-exam'
+      path: '/online-exam'
+      fullPath: '/student/online-exam'
+      preLoaderRoute: typeof StudentOnlineExamRouteImport
+      parentRoute: typeof StudentRoute
     }
-    '/faculty/lac/theory-exam': {
-      id: '/faculty/lac/theory-exam'
-      path: '/lac/theory-exam'
-      fullPath: '/faculty/lac/theory-exam'
-      preLoaderRoute: typeof FacultyLacTheoryExamRouteImport
-      parentRoute: typeof FacultyRoute
+    '/student/payment-history': {
+      id: '/student/payment-history'
+      path: '/payment-history'
+      fullPath: '/student/payment-history'
+      preLoaderRoute: typeof StudentPaymentHistoryRouteImport
+      parentRoute: typeof StudentRoute
     }
-    '/faculty/admission/eligible-ty': {
-      id: '/faculty/admission/eligible-ty'
-      path: '/admission/eligible-ty'
-      fullPath: '/faculty/admission/eligible-ty'
-      preLoaderRoute: typeof FacultyAdmissionEligibleTyRouteImport
-      parentRoute: typeof FacultyRoute
+    '/student/profile': {
+      id: '/student/profile'
+      path: '/profile'
+      fullPath: '/student/profile'
+      preLoaderRoute: typeof StudentProfileRouteImport
+      parentRoute: typeof StudentRoute
     }
-    '/faculty/admission/eligible-sy': {
-      id: '/faculty/admission/eligible-sy'
-      path: '/admission/eligible-sy'
-      fullPath: '/faculty/admission/eligible-sy'
-      preLoaderRoute: typeof FacultyAdmissionEligibleSyRouteImport
-      parentRoute: typeof FacultyRoute
+    '/student/result': {
+      id: '/student/result'
+      path: '/result'
+      fullPath: '/student/result'
+      preLoaderRoute: typeof StudentResultRouteImport
+      parentRoute: typeof StudentRoute
     }
-    '/faculty/admission/eligible-fy': {
-      id: '/faculty/admission/eligible-fy'
-      path: '/admission/eligible-fy'
-      fullPath: '/faculty/admission/eligible-fy'
-      preLoaderRoute: typeof FacultyAdmissionEligibleFyRouteImport
+    '/admin/academic/batches': {
+      id: '/admin/academic/batches'
+      path: '/academic/batches'
+      fullPath: '/admin/academic/batches'
+      preLoaderRoute: typeof AdminAcademicBatchesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/academic/branches': {
+      id: '/admin/academic/branches'
+      path: '/academic/branches'
+      fullPath: '/admin/academic/branches'
+      preLoaderRoute: typeof AdminAcademicBranchesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/academic/course-mappings': {
+      id: '/admin/academic/course-mappings'
+      path: '/academic/course-mappings'
+      fullPath: '/admin/academic/course-mappings'
+      preLoaderRoute: typeof AdminAcademicCourseMappingsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/academic/course-types': {
+      id: '/admin/academic/course-types'
+      path: '/academic/course-types'
+      fullPath: '/admin/academic/course-types'
+      preLoaderRoute: typeof AdminAcademicCourseTypesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/academic/courses': {
+      id: '/admin/academic/courses'
+      path: '/academic/courses'
+      fullPath: '/admin/academic/courses'
+      preLoaderRoute: typeof AdminAcademicCoursesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/academic/divisions': {
+      id: '/admin/academic/divisions'
+      path: '/academic/divisions'
+      fullPath: '/admin/academic/divisions'
+      preLoaderRoute: typeof AdminAcademicDivisionsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/academic/programs': {
+      id: '/admin/academic/programs'
+      path: '/academic/programs'
+      fullPath: '/admin/academic/programs'
+      preLoaderRoute: typeof AdminAcademicProgramsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/academic/schemes': {
+      id: '/admin/academic/schemes'
+      path: '/academic/schemes'
+      fullPath: '/admin/academic/schemes'
+      preLoaderRoute: typeof AdminAcademicSchemesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/academic/semesters': {
+      id: '/admin/academic/semesters'
+      path: '/academic/semesters'
+      fullPath: '/admin/academic/semesters'
+      preLoaderRoute: typeof AdminAcademicSemestersRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/academic/years': {
+      id: '/admin/academic/years'
+      path: '/academic/years'
+      fullPath: '/admin/academic/years'
+      preLoaderRoute: typeof AdminAcademicYearsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/admissions/admitted': {
+      id: '/admin/admissions/admitted'
+      path: '/admissions/admitted'
+      fullPath: '/admin/admissions/admitted'
+      preLoaderRoute: typeof AdminAdmissionsAdmittedRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/admissions/eligibility': {
+      id: '/admin/admissions/eligibility'
+      path: '/admissions/eligibility'
+      fullPath: '/admin/admissions/eligibility'
+      preLoaderRoute: typeof AdminAdmissionsEligibilityRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/admissions/eligible': {
+      id: '/admin/admissions/eligible'
+      path: '/admissions/eligible'
+      fullPath: '/admin/admissions/eligible'
+      preLoaderRoute: typeof AdminAdmissionsEligibleRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/admissions/fees': {
+      id: '/admin/admissions/fees'
+      path: '/admissions/fees'
+      fullPath: '/admin/admissions/fees'
+      preLoaderRoute: typeof AdminAdmissionsFeesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/admissions/settings': {
+      id: '/admin/admissions/settings'
+      path: '/admissions/settings'
+      fullPath: '/admin/admissions/settings'
+      preLoaderRoute: typeof AdminAdmissionsSettingsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/admissions/summary': {
+      id: '/admin/admissions/summary'
+      path: '/admissions/summary'
+      fullPath: '/admin/admissions/summary'
+      preLoaderRoute: typeof AdminAdmissionsSummaryRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/analytics/results': {
+      id: '/admin/analytics/results'
+      path: '/analytics/results'
+      fullPath: '/admin/analytics/results'
+      preLoaderRoute: typeof AdminAnalyticsResultsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/data/import': {
+      id: '/admin/data/import'
+      path: '/data/import'
+      fullPath: '/admin/data/import'
+      preLoaderRoute: typeof AdminDataImportRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/data/migration': {
+      id: '/admin/data/migration'
+      path: '/data/migration'
+      fullPath: '/admin/data/migration'
+      preLoaderRoute: typeof AdminDataMigrationRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/data/reconciliation': {
+      id: '/admin/data/reconciliation'
+      path: '/data/reconciliation'
+      fullPath: '/admin/data/reconciliation'
+      preLoaderRoute: typeof AdminDataReconciliationRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/course-registration': {
+      id: '/admin/exams/course-registration'
+      path: '/exams/course-registration'
+      fullPath: '/admin/exams/course-registration'
+      preLoaderRoute: typeof AdminExamsCourseRegistrationRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/courses': {
+      id: '/admin/exams/courses'
+      path: '/exams/courses'
+      fullPath: '/admin/exams/courses'
+      preLoaderRoute: typeof AdminExamsCoursesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/eligibility': {
+      id: '/admin/exams/eligibility'
+      path: '/exams/eligibility'
+      fullPath: '/admin/exams/eligibility'
+      preLoaderRoute: typeof AdminExamsEligibilityRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/final-registration': {
+      id: '/admin/exams/final-registration'
+      path: '/exams/final-registration'
+      fullPath: '/admin/exams/final-registration'
+      preLoaderRoute: typeof AdminExamsFinalRegistrationRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/r': {
+      id: '/admin/exams/r'
+      path: '/exams/r'
+      fullPath: '/admin/exams/r'
+      preLoaderRoute: typeof AdminExamsRRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/r-rr': {
+      id: '/admin/exams/r-rr'
+      path: '/exams/r-rr'
+      fullPath: '/admin/exams/r-rr'
+      preLoaderRoute: typeof AdminExamsRRrRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/registration-review': {
+      id: '/admin/exams/registration-review'
+      path: '/exams/registration-review'
+      fullPath: '/admin/exams/registration-review'
+      preLoaderRoute: typeof AdminExamsRegistrationReviewRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/rr': {
+      id: '/admin/exams/rr'
+      path: '/exams/rr'
+      fullPath: '/admin/exams/rr'
+      preLoaderRoute: typeof AdminExamsRrRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/sessions': {
+      id: '/admin/exams/sessions'
+      path: '/exams/sessions'
+      fullPath: '/admin/exams/sessions'
+      preLoaderRoute: typeof AdminExamsSessionsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/settings': {
+      id: '/admin/exams/settings'
+      path: '/exams/settings'
+      fullPath: '/admin/exams/settings'
+      preLoaderRoute: typeof AdminExamsSettingsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/timetable': {
+      id: '/admin/exams/timetable'
+      path: '/exams/timetable'
+      fullPath: '/admin/exams/timetable'
+      preLoaderRoute: typeof AdminExamsTimetableRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/exams/timetable-settings': {
+      id: '/admin/exams/timetable-settings'
+      path: '/exams/timetable-settings'
+      fullPath: '/admin/exams/timetable-settings'
+      preLoaderRoute: typeof AdminExamsTimetableSettingsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/fees/heads': {
+      id: '/admin/fees/heads'
+      path: '/fees/heads'
+      fullPath: '/admin/fees/heads'
+      preLoaderRoute: typeof AdminFeesHeadsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/fees/payments': {
+      id: '/admin/fees/payments'
+      path: '/fees/payments'
+      fullPath: '/admin/fees/payments'
+      preLoaderRoute: typeof AdminFeesPaymentsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/fees/reconciliation': {
+      id: '/admin/fees/reconciliation'
+      path: '/fees/reconciliation'
+      fullPath: '/admin/fees/reconciliation'
+      preLoaderRoute: typeof AdminFeesReconciliationRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/fees/structures': {
+      id: '/admin/fees/structures'
+      path: '/fees/structures'
+      fullPath: '/admin/fees/structures'
+      preLoaderRoute: typeof AdminFeesStructuresRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/master/faculty': {
+      id: '/admin/master/faculty'
+      path: '/master/faculty'
+      fullPath: '/admin/master/faculty'
+      preLoaderRoute: typeof AdminMasterFacultyRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/master/students': {
+      id: '/admin/master/students'
+      path: '/master/students'
+      fullPath: '/admin/master/students'
+      preLoaderRoute: typeof AdminMasterStudentsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/operations/detention': {
+      id: '/admin/operations/detention'
+      path: '/operations/detention'
+      fullPath: '/admin/operations/detention'
+      preLoaderRoute: typeof AdminOperationsDetentionRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/operations/internal-assessment': {
+      id: '/admin/operations/internal-assessment'
+      path: '/operations/internal-assessment'
+      fullPath: '/admin/operations/internal-assessment'
+      preLoaderRoute: typeof AdminOperationsInternalAssessmentRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/operations/marks-monitoring': {
+      id: '/admin/operations/marks-monitoring'
+      path: '/operations/marks-monitoring'
+      fullPath: '/admin/operations/marks-monitoring'
+      preLoaderRoute: typeof AdminOperationsMarksMonitoringRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/reports/': {
+      id: '/admin/reports/'
+      path: '/reports'
+      fullPath: '/admin/reports/'
+      preLoaderRoute: typeof AdminReportsIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/reports/academic': {
+      id: '/admin/reports/academic'
+      path: '/reports/academic'
+      fullPath: '/admin/reports/academic'
+      preLoaderRoute: typeof AdminReportsAcademicRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/reports/admission': {
+      id: '/admin/reports/admission'
+      path: '/reports/admission'
+      fullPath: '/admin/reports/admission'
+      preLoaderRoute: typeof AdminReportsAdmissionRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/reports/examination': {
+      id: '/admin/reports/examination'
+      path: '/reports/examination'
+      fullPath: '/admin/reports/examination'
+      preLoaderRoute: typeof AdminReportsExaminationRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/reports/fees': {
+      id: '/admin/reports/fees'
+      path: '/reports/fees'
+      fullPath: '/admin/reports/fees'
+      preLoaderRoute: typeof AdminReportsFeesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/reports/results': {
+      id: '/admin/reports/results'
+      path: '/reports/results'
+      fullPath: '/admin/reports/results'
+      preLoaderRoute: typeof AdminReportsResultsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/results/backlogs': {
+      id: '/admin/results/backlogs'
+      path: '/results/backlogs'
+      fullPath: '/admin/results/backlogs'
+      preLoaderRoute: typeof AdminResultsBacklogsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/results/finalization': {
+      id: '/admin/results/finalization'
+      path: '/results/finalization'
+      fullPath: '/admin/results/finalization'
+      preLoaderRoute: typeof AdminResultsFinalizationRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/results/import': {
+      id: '/admin/results/import'
+      path: '/results/import'
+      fullPath: '/admin/results/import'
+      preLoaderRoute: typeof AdminResultsImportRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/results/marksheets': {
+      id: '/admin/results/marksheets'
+      path: '/results/marksheets'
+      fullPath: '/admin/results/marksheets'
+      preLoaderRoute: typeof AdminResultsMarksheetsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/results/processing': {
+      id: '/admin/results/processing'
+      path: '/results/processing'
+      fullPath: '/admin/results/processing'
+      preLoaderRoute: typeof AdminResultsProcessingRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/results/settings': {
+      id: '/admin/results/settings'
+      path: '/results/settings'
+      fullPath: '/admin/results/settings'
+      preLoaderRoute: typeof AdminResultsSettingsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/results/verification': {
+      id: '/admin/results/verification'
+      path: '/results/verification'
+      fullPath: '/admin/results/verification'
+      preLoaderRoute: typeof AdminResultsVerificationRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/': {
+      id: '/admin/settings/'
+      path: '/settings'
+      fullPath: '/admin/settings/'
+      preLoaderRoute: typeof AdminSettingsIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/admission': {
+      id: '/admin/settings/admission'
+      path: '/settings/admission'
+      fullPath: '/admin/settings/admission'
+      preLoaderRoute: typeof AdminSettingsAdmissionRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/examination': {
+      id: '/admin/settings/examination'
+      path: '/settings/examination'
+      fullPath: '/admin/settings/examination'
+      preLoaderRoute: typeof AdminSettingsExaminationRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/registration': {
+      id: '/admin/settings/registration'
+      path: '/settings/registration'
+      fullPath: '/admin/settings/registration'
+      preLoaderRoute: typeof AdminSettingsRegistrationRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/semester': {
+      id: '/admin/settings/semester'
+      path: '/settings/semester'
+      fullPath: '/admin/settings/semester'
+      preLoaderRoute: typeof AdminSettingsSemesterRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/users/': {
+      id: '/admin/users/'
+      path: '/users'
+      fullPath: '/admin/users/'
+      preLoaderRoute: typeof AdminUsersIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/users/assignments': {
+      id: '/admin/users/assignments'
+      path: '/users/assignments'
+      fullPath: '/admin/users/assignments'
+      preLoaderRoute: typeof AdminUsersAssignmentsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/users/permissions': {
+      id: '/admin/users/permissions'
+      path: '/users/permissions'
+      fullPath: '/admin/users/permissions'
+      preLoaderRoute: typeof AdminUsersPermissionsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/users/roles': {
+      id: '/admin/users/roles'
+      path: '/users/roles'
+      fullPath: '/admin/users/roles'
+      preLoaderRoute: typeof AdminUsersRolesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/faculty/admission/admitted-2025-26': {
+      id: '/faculty/admission/admitted-2025-26'
+      path: '/admission/admitted-2025-26'
+      fullPath: '/faculty/admission/admitted-2025-26'
+      preLoaderRoute: typeof FacultyAdmissionAdmitted202526RouteImport
       parentRoute: typeof FacultyRoute
     }
     '/faculty/admission/admitted-2026-27': {
@@ -1054,39 +2139,221 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FacultyAdmissionAdmitted202627RouteImport
       parentRoute: typeof FacultyRoute
     }
-    '/faculty/admission/admitted-2025-26': {
-      id: '/faculty/admission/admitted-2025-26'
-      path: '/admission/admitted-2025-26'
-      fullPath: '/faculty/admission/admitted-2025-26'
-      preLoaderRoute: typeof FacultyAdmissionAdmitted202526RouteImport
+    '/faculty/admission/eligible-fy': {
+      id: '/faculty/admission/eligible-fy'
+      path: '/admission/eligible-fy'
+      fullPath: '/faculty/admission/eligible-fy'
+      preLoaderRoute: typeof FacultyAdmissionEligibleFyRouteImport
       parentRoute: typeof FacultyRoute
     }
-    '/faculty/workload/marks-entry/fill': {
-      id: '/faculty/workload/marks-entry/fill'
-      path: '/workload/marks-entry/fill'
-      fullPath: '/faculty/workload/marks-entry/fill'
-      preLoaderRoute: typeof FacultyWorkloadMarksEntryFillRouteImport
+    '/faculty/admission/eligible-sy': {
+      id: '/faculty/admission/eligible-sy'
+      path: '/admission/eligible-sy'
+      fullPath: '/faculty/admission/eligible-sy'
+      preLoaderRoute: typeof FacultyAdmissionEligibleSyRouteImport
       parentRoute: typeof FacultyRoute
     }
-    '/faculty/workload/detentions/provisional': {
-      id: '/faculty/workload/detentions/provisional'
-      path: '/workload/detentions/provisional'
-      fullPath: '/faculty/workload/detentions/provisional'
-      preLoaderRoute: typeof FacultyWorkloadDetentionsProvisionalRouteImport
+    '/faculty/admission/eligible-ty': {
+      id: '/faculty/admission/eligible-ty'
+      path: '/admission/eligible-ty'
+      fullPath: '/faculty/admission/eligible-ty'
+      preLoaderRoute: typeof FacultyAdmissionEligibleTyRouteImport
       parentRoute: typeof FacultyRoute
     }
-    '/faculty/workload/detentions/nil-list': {
-      id: '/faculty/workload/detentions/nil-list'
-      path: '/workload/detentions/nil-list'
-      fullPath: '/faculty/workload/detentions/nil-list'
-      preLoaderRoute: typeof FacultyWorkloadDetentionsNilListRouteImport
+    '/faculty/lac/theory-exam': {
+      id: '/faculty/lac/theory-exam'
+      path: '/lac/theory-exam'
+      fullPath: '/faculty/lac/theory-exam'
+      preLoaderRoute: typeof FacultyLacTheoryExamRouteImport
       parentRoute: typeof FacultyRoute
     }
-    '/faculty/workload/detentions/nil-add': {
-      id: '/faculty/workload/detentions/nil-add'
-      path: '/workload/detentions/nil-add'
-      fullPath: '/faculty/workload/detentions/nil-add'
-      preLoaderRoute: typeof FacultyWorkloadDetentionsNilAddRouteImport
+    '/faculty/online-exam/question-bank': {
+      id: '/faculty/online-exam/question-bank'
+      path: '/online-exam/question-bank'
+      fullPath: '/faculty/online-exam/question-bank'
+      preLoaderRoute: typeof FacultyOnlineExamQuestionBankRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/result-analysis/bitwise-marks': {
+      id: '/faculty/result-analysis/bitwise-marks'
+      path: '/result-analysis/bitwise-marks'
+      fullPath: '/faculty/result-analysis/bitwise-marks'
+      preLoaderRoute: typeof FacultyResultAnalysisBitwiseMarksRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/result-analysis/summer-2025': {
+      id: '/faculty/result-analysis/summer-2025'
+      path: '/result-analysis/summer-2025'
+      fullPath: '/faculty/result-analysis/summer-2025'
+      preLoaderRoute: typeof FacultyResultAnalysisSummer2025RouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/result-analysis/summer-2026': {
+      id: '/faculty/result-analysis/summer-2026'
+      path: '/result-analysis/summer-2026'
+      fullPath: '/faculty/result-analysis/summer-2026'
+      preLoaderRoute: typeof FacultyResultAnalysisSummer2026RouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/result-analysis/winter-2025': {
+      id: '/faculty/result-analysis/winter-2025'
+      path: '/result-analysis/winter-2025'
+      fullPath: '/faculty/result-analysis/winter-2025'
+      preLoaderRoute: typeof FacultyResultAnalysisWinter2025RouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/students/course-wise': {
+      id: '/faculty/students/course-wise'
+      path: '/students/course-wise'
+      fullPath: '/faculty/students/course-wise'
+      preLoaderRoute: typeof FacultyStudentsCourseWiseRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/students/course-wise-sapr': {
+      id: '/faculty/students/course-wise-sapr'
+      path: '/students/course-wise-sapr'
+      fullPath: '/faculty/students/course-wise-sapr'
+      preLoaderRoute: typeof FacultyStudentsCourseWiseSaprRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/students/eligible': {
+      id: '/faculty/students/eligible'
+      path: '/students/eligible'
+      fullPath: '/faculty/students/eligible'
+      preLoaderRoute: typeof FacultyStudentsEligibleRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/students/registered': {
+      id: '/faculty/students/registered'
+      path: '/students/registered'
+      fullPath: '/faculty/students/registered'
+      preLoaderRoute: typeof FacultyStudentsRegisteredRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/students/registration-list': {
+      id: '/faculty/students/registration-list'
+      path: '/students/registration-list'
+      fullPath: '/faculty/students/registration-list'
+      preLoaderRoute: typeof FacultyStudentsRegistrationListRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/student/exam-registration/confirm': {
+      id: '/student/exam-registration/confirm'
+      path: '/exam-registration/confirm'
+      fullPath: '/student/exam-registration/confirm'
+      preLoaderRoute: typeof StudentExamRegistrationConfirmRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/exam-registration/fill': {
+      id: '/student/exam-registration/fill'
+      path: '/exam-registration/fill'
+      fullPath: '/student/exam-registration/fill'
+      preLoaderRoute: typeof StudentExamRegistrationFillRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/exam-registration/payment': {
+      id: '/student/exam-registration/payment'
+      path: '/exam-registration/payment'
+      fullPath: '/student/exam-registration/payment'
+      preLoaderRoute: typeof StudentExamRegistrationPaymentRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/exam-registration/print': {
+      id: '/student/exam-registration/print'
+      path: '/exam-registration/print'
+      fullPath: '/student/exam-registration/print'
+      preLoaderRoute: typeof StudentExamRegistrationPrintRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/exam-registration/receipt': {
+      id: '/student/exam-registration/receipt'
+      path: '/exam-registration/receipt'
+      fullPath: '/student/exam-registration/receipt'
+      preLoaderRoute: typeof StudentExamRegistrationReceiptRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/feedback/endterm': {
+      id: '/student/feedback/endterm'
+      path: '/feedback/endterm'
+      fullPath: '/student/feedback/endterm'
+      preLoaderRoute: typeof StudentFeedbackEndtermRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/feedback/midterm': {
+      id: '/student/feedback/midterm'
+      path: '/feedback/midterm'
+      fullPath: '/student/feedback/midterm'
+      preLoaderRoute: typeof StudentFeedbackMidtermRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/photocopy/confirm': {
+      id: '/student/photocopy/confirm'
+      path: '/photocopy/confirm'
+      fullPath: '/student/photocopy/confirm'
+      preLoaderRoute: typeof StudentPhotocopyConfirmRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/photocopy/fill': {
+      id: '/student/photocopy/fill'
+      path: '/photocopy/fill'
+      fullPath: '/student/photocopy/fill'
+      preLoaderRoute: typeof StudentPhotocopyFillRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/photocopy/payment': {
+      id: '/student/photocopy/payment'
+      path: '/photocopy/payment'
+      fullPath: '/student/photocopy/payment'
+      preLoaderRoute: typeof StudentPhotocopyPaymentRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/photocopy/print': {
+      id: '/student/photocopy/print'
+      path: '/photocopy/print'
+      fullPath: '/student/photocopy/print'
+      preLoaderRoute: typeof StudentPhotocopyPrintRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/photocopy/receipt': {
+      id: '/student/photocopy/receipt'
+      path: '/photocopy/receipt'
+      fullPath: '/student/photocopy/receipt'
+      preLoaderRoute: typeof StudentPhotocopyReceiptRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/year-wise-result/fy': {
+      id: '/student/year-wise-result/fy'
+      path: '/year-wise-result/fy'
+      fullPath: '/student/year-wise-result/fy'
+      preLoaderRoute: typeof StudentYearWiseResultFyRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/year-wise-result/sy': {
+      id: '/student/year-wise-result/sy'
+      path: '/year-wise-result/sy'
+      fullPath: '/student/year-wise-result/sy'
+      preLoaderRoute: typeof StudentYearWiseResultSyRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/admin/master/faculty/$id': {
+      id: '/admin/master/faculty/$id'
+      path: '/$id'
+      fullPath: '/admin/master/faculty/$id'
+      preLoaderRoute: typeof AdminMasterFacultyIdRouteImport
+      parentRoute: typeof AdminMasterFacultyRoute
+    }
+    '/admin/master/students/$id': {
+      id: '/admin/master/students/$id'
+      path: '/$id'
+      fullPath: '/admin/master/students/$id'
+      preLoaderRoute: typeof AdminMasterStudentsIdRouteImport
+      parentRoute: typeof AdminMasterStudentsRoute
+    }
+    '/faculty/workload/detentions/add': {
+      id: '/faculty/workload/detentions/add'
+      path: '/workload/detentions/add'
+      fullPath: '/faculty/workload/detentions/add'
+      preLoaderRoute: typeof FacultyWorkloadDetentionsAddRouteImport
       parentRoute: typeof FacultyRoute
     }
     '/faculty/workload/detentions/final': {
@@ -1096,15 +2363,195 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FacultyWorkloadDetentionsFinalRouteImport
       parentRoute: typeof FacultyRoute
     }
-    '/faculty/workload/detentions/add': {
-      id: '/faculty/workload/detentions/add'
-      path: '/workload/detentions/add'
-      fullPath: '/faculty/workload/detentions/add'
-      preLoaderRoute: typeof FacultyWorkloadDetentionsAddRouteImport
+    '/faculty/workload/detentions/nil-add': {
+      id: '/faculty/workload/detentions/nil-add'
+      path: '/workload/detentions/nil-add'
+      fullPath: '/faculty/workload/detentions/nil-add'
+      preLoaderRoute: typeof FacultyWorkloadDetentionsNilAddRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/workload/detentions/nil-list': {
+      id: '/faculty/workload/detentions/nil-list'
+      path: '/workload/detentions/nil-list'
+      fullPath: '/faculty/workload/detentions/nil-list'
+      preLoaderRoute: typeof FacultyWorkloadDetentionsNilListRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/workload/detentions/provisional': {
+      id: '/faculty/workload/detentions/provisional'
+      path: '/workload/detentions/provisional'
+      fullPath: '/faculty/workload/detentions/provisional'
+      preLoaderRoute: typeof FacultyWorkloadDetentionsProvisionalRouteImport
+      parentRoute: typeof FacultyRoute
+    }
+    '/faculty/workload/marks-entry/fill': {
+      id: '/faculty/workload/marks-entry/fill'
+      path: '/workload/marks-entry/fill'
+      fullPath: '/faculty/workload/marks-entry/fill'
+      preLoaderRoute: typeof FacultyWorkloadMarksEntryFillRouteImport
       parentRoute: typeof FacultyRoute
     }
   }
 }
+
+interface AdminMasterFacultyRouteChildren {
+  AdminMasterFacultyIdRoute: typeof AdminMasterFacultyIdRoute
+}
+
+const AdminMasterFacultyRouteChildren: AdminMasterFacultyRouteChildren = {
+  AdminMasterFacultyIdRoute: AdminMasterFacultyIdRoute,
+}
+
+const AdminMasterFacultyRouteWithChildren =
+  AdminMasterFacultyRoute._addFileChildren(AdminMasterFacultyRouteChildren)
+
+interface AdminMasterStudentsRouteChildren {
+  AdminMasterStudentsIdRoute: typeof AdminMasterStudentsIdRoute
+}
+
+const AdminMasterStudentsRouteChildren: AdminMasterStudentsRouteChildren = {
+  AdminMasterStudentsIdRoute: AdminMasterStudentsIdRoute,
+}
+
+const AdminMasterStudentsRouteWithChildren =
+  AdminMasterStudentsRoute._addFileChildren(AdminMasterStudentsRouteChildren)
+
+interface AdminRouteChildren {
+  AdminDashboardRoute: typeof AdminDashboardRoute
+  AdminAcademicBatchesRoute: typeof AdminAcademicBatchesRoute
+  AdminAcademicBranchesRoute: typeof AdminAcademicBranchesRoute
+  AdminAcademicCourseMappingsRoute: typeof AdminAcademicCourseMappingsRoute
+  AdminAcademicCourseTypesRoute: typeof AdminAcademicCourseTypesRoute
+  AdminAcademicCoursesRoute: typeof AdminAcademicCoursesRoute
+  AdminAcademicDivisionsRoute: typeof AdminAcademicDivisionsRoute
+  AdminAcademicProgramsRoute: typeof AdminAcademicProgramsRoute
+  AdminAcademicSchemesRoute: typeof AdminAcademicSchemesRoute
+  AdminAcademicSemestersRoute: typeof AdminAcademicSemestersRoute
+  AdminAcademicYearsRoute: typeof AdminAcademicYearsRoute
+  AdminAdmissionsAdmittedRoute: typeof AdminAdmissionsAdmittedRoute
+  AdminAdmissionsEligibilityRoute: typeof AdminAdmissionsEligibilityRoute
+  AdminAdmissionsEligibleRoute: typeof AdminAdmissionsEligibleRoute
+  AdminAdmissionsFeesRoute: typeof AdminAdmissionsFeesRoute
+  AdminAdmissionsSettingsRoute: typeof AdminAdmissionsSettingsRoute
+  AdminAdmissionsSummaryRoute: typeof AdminAdmissionsSummaryRoute
+  AdminAnalyticsResultsRoute: typeof AdminAnalyticsResultsRoute
+  AdminDataImportRoute: typeof AdminDataImportRoute
+  AdminDataMigrationRoute: typeof AdminDataMigrationRoute
+  AdminDataReconciliationRoute: typeof AdminDataReconciliationRoute
+  AdminExamsCourseRegistrationRoute: typeof AdminExamsCourseRegistrationRoute
+  AdminExamsCoursesRoute: typeof AdminExamsCoursesRoute
+  AdminExamsEligibilityRoute: typeof AdminExamsEligibilityRoute
+  AdminExamsFinalRegistrationRoute: typeof AdminExamsFinalRegistrationRoute
+  AdminExamsRRoute: typeof AdminExamsRRoute
+  AdminExamsRRrRoute: typeof AdminExamsRRrRoute
+  AdminExamsRegistrationReviewRoute: typeof AdminExamsRegistrationReviewRoute
+  AdminExamsRrRoute: typeof AdminExamsRrRoute
+  AdminExamsSessionsRoute: typeof AdminExamsSessionsRoute
+  AdminExamsSettingsRoute: typeof AdminExamsSettingsRoute
+  AdminExamsTimetableRoute: typeof AdminExamsTimetableRoute
+  AdminExamsTimetableSettingsRoute: typeof AdminExamsTimetableSettingsRoute
+  AdminFeesHeadsRoute: typeof AdminFeesHeadsRoute
+  AdminFeesPaymentsRoute: typeof AdminFeesPaymentsRoute
+  AdminFeesReconciliationRoute: typeof AdminFeesReconciliationRoute
+  AdminFeesStructuresRoute: typeof AdminFeesStructuresRoute
+  AdminMasterFacultyRoute: typeof AdminMasterFacultyRouteWithChildren
+  AdminMasterStudentsRoute: typeof AdminMasterStudentsRouteWithChildren
+  AdminOperationsDetentionRoute: typeof AdminOperationsDetentionRoute
+  AdminOperationsInternalAssessmentRoute: typeof AdminOperationsInternalAssessmentRoute
+  AdminOperationsMarksMonitoringRoute: typeof AdminOperationsMarksMonitoringRoute
+  AdminReportsAcademicRoute: typeof AdminReportsAcademicRoute
+  AdminReportsAdmissionRoute: typeof AdminReportsAdmissionRoute
+  AdminReportsExaminationRoute: typeof AdminReportsExaminationRoute
+  AdminReportsFeesRoute: typeof AdminReportsFeesRoute
+  AdminReportsResultsRoute: typeof AdminReportsResultsRoute
+  AdminResultsBacklogsRoute: typeof AdminResultsBacklogsRoute
+  AdminResultsFinalizationRoute: typeof AdminResultsFinalizationRoute
+  AdminResultsImportRoute: typeof AdminResultsImportRoute
+  AdminResultsMarksheetsRoute: typeof AdminResultsMarksheetsRoute
+  AdminResultsProcessingRoute: typeof AdminResultsProcessingRoute
+  AdminResultsSettingsRoute: typeof AdminResultsSettingsRoute
+  AdminResultsVerificationRoute: typeof AdminResultsVerificationRoute
+  AdminSettingsAdmissionRoute: typeof AdminSettingsAdmissionRoute
+  AdminSettingsExaminationRoute: typeof AdminSettingsExaminationRoute
+  AdminSettingsRegistrationRoute: typeof AdminSettingsRegistrationRoute
+  AdminSettingsSemesterRoute: typeof AdminSettingsSemesterRoute
+  AdminUsersAssignmentsRoute: typeof AdminUsersAssignmentsRoute
+  AdminUsersPermissionsRoute: typeof AdminUsersPermissionsRoute
+  AdminUsersRolesRoute: typeof AdminUsersRolesRoute
+  AdminReportsIndexRoute: typeof AdminReportsIndexRoute
+  AdminSettingsIndexRoute: typeof AdminSettingsIndexRoute
+  AdminUsersIndexRoute: typeof AdminUsersIndexRoute
+}
+
+const AdminRouteChildren: AdminRouteChildren = {
+  AdminDashboardRoute: AdminDashboardRoute,
+  AdminAcademicBatchesRoute: AdminAcademicBatchesRoute,
+  AdminAcademicBranchesRoute: AdminAcademicBranchesRoute,
+  AdminAcademicCourseMappingsRoute: AdminAcademicCourseMappingsRoute,
+  AdminAcademicCourseTypesRoute: AdminAcademicCourseTypesRoute,
+  AdminAcademicCoursesRoute: AdminAcademicCoursesRoute,
+  AdminAcademicDivisionsRoute: AdminAcademicDivisionsRoute,
+  AdminAcademicProgramsRoute: AdminAcademicProgramsRoute,
+  AdminAcademicSchemesRoute: AdminAcademicSchemesRoute,
+  AdminAcademicSemestersRoute: AdminAcademicSemestersRoute,
+  AdminAcademicYearsRoute: AdminAcademicYearsRoute,
+  AdminAdmissionsAdmittedRoute: AdminAdmissionsAdmittedRoute,
+  AdminAdmissionsEligibilityRoute: AdminAdmissionsEligibilityRoute,
+  AdminAdmissionsEligibleRoute: AdminAdmissionsEligibleRoute,
+  AdminAdmissionsFeesRoute: AdminAdmissionsFeesRoute,
+  AdminAdmissionsSettingsRoute: AdminAdmissionsSettingsRoute,
+  AdminAdmissionsSummaryRoute: AdminAdmissionsSummaryRoute,
+  AdminAnalyticsResultsRoute: AdminAnalyticsResultsRoute,
+  AdminDataImportRoute: AdminDataImportRoute,
+  AdminDataMigrationRoute: AdminDataMigrationRoute,
+  AdminDataReconciliationRoute: AdminDataReconciliationRoute,
+  AdminExamsCourseRegistrationRoute: AdminExamsCourseRegistrationRoute,
+  AdminExamsCoursesRoute: AdminExamsCoursesRoute,
+  AdminExamsEligibilityRoute: AdminExamsEligibilityRoute,
+  AdminExamsFinalRegistrationRoute: AdminExamsFinalRegistrationRoute,
+  AdminExamsRRoute: AdminExamsRRoute,
+  AdminExamsRRrRoute: AdminExamsRRrRoute,
+  AdminExamsRegistrationReviewRoute: AdminExamsRegistrationReviewRoute,
+  AdminExamsRrRoute: AdminExamsRrRoute,
+  AdminExamsSessionsRoute: AdminExamsSessionsRoute,
+  AdminExamsSettingsRoute: AdminExamsSettingsRoute,
+  AdminExamsTimetableRoute: AdminExamsTimetableRoute,
+  AdminExamsTimetableSettingsRoute: AdminExamsTimetableSettingsRoute,
+  AdminFeesHeadsRoute: AdminFeesHeadsRoute,
+  AdminFeesPaymentsRoute: AdminFeesPaymentsRoute,
+  AdminFeesReconciliationRoute: AdminFeesReconciliationRoute,
+  AdminFeesStructuresRoute: AdminFeesStructuresRoute,
+  AdminMasterFacultyRoute: AdminMasterFacultyRouteWithChildren,
+  AdminMasterStudentsRoute: AdminMasterStudentsRouteWithChildren,
+  AdminOperationsDetentionRoute: AdminOperationsDetentionRoute,
+  AdminOperationsInternalAssessmentRoute:
+    AdminOperationsInternalAssessmentRoute,
+  AdminOperationsMarksMonitoringRoute: AdminOperationsMarksMonitoringRoute,
+  AdminReportsAcademicRoute: AdminReportsAcademicRoute,
+  AdminReportsAdmissionRoute: AdminReportsAdmissionRoute,
+  AdminReportsExaminationRoute: AdminReportsExaminationRoute,
+  AdminReportsFeesRoute: AdminReportsFeesRoute,
+  AdminReportsResultsRoute: AdminReportsResultsRoute,
+  AdminResultsBacklogsRoute: AdminResultsBacklogsRoute,
+  AdminResultsFinalizationRoute: AdminResultsFinalizationRoute,
+  AdminResultsImportRoute: AdminResultsImportRoute,
+  AdminResultsMarksheetsRoute: AdminResultsMarksheetsRoute,
+  AdminResultsProcessingRoute: AdminResultsProcessingRoute,
+  AdminResultsSettingsRoute: AdminResultsSettingsRoute,
+  AdminResultsVerificationRoute: AdminResultsVerificationRoute,
+  AdminSettingsAdmissionRoute: AdminSettingsAdmissionRoute,
+  AdminSettingsExaminationRoute: AdminSettingsExaminationRoute,
+  AdminSettingsRegistrationRoute: AdminSettingsRegistrationRoute,
+  AdminSettingsSemesterRoute: AdminSettingsSemesterRoute,
+  AdminUsersAssignmentsRoute: AdminUsersAssignmentsRoute,
+  AdminUsersPermissionsRoute: AdminUsersPermissionsRoute,
+  AdminUsersRolesRoute: AdminUsersRolesRoute,
+  AdminReportsIndexRoute: AdminReportsIndexRoute,
+  AdminSettingsIndexRoute: AdminSettingsIndexRoute,
+  AdminUsersIndexRoute: AdminUsersIndexRoute,
+}
+
+const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
 
 interface FacultyRouteChildren {
   FacultyChangePasswordRoute: typeof FacultyChangePasswordRoute
@@ -1230,6 +2677,7 @@ const StudentRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRouteWithChildren,
   FacultyRoute: FacultyRouteWithChildren,
   LoginRoute: LoginRoute,
   StudentRoute: StudentRouteWithChildren,
